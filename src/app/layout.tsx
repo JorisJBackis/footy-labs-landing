@@ -8,6 +8,9 @@ import {Toaster} from "@/components/ui/sonner";
 export const metadata: Metadata = {
   title: "Footy Labs",
   description: "Footy Labs - platform for players, agents and clubs",
+  icons: {
+    icon: '/favicon.png',
+  }
 };
 export default function RootLayout({
                                      children,

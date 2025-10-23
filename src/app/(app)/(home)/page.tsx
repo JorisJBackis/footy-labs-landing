@@ -1,7 +1,9 @@
 export default function HomePage() {
   return (
-  <div>
+  <div className="container-wrapper">
+    <div className="container overflow-hidden">
       HomePage
+    </div>
   </div>
   );
 }
