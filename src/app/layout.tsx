@@ -1,5 +1,5 @@
 import type {Metadata} from "next";
-import "./globals.css";
+import "../styles/globals.css";
 import {cn} from "@/lib/utils";
 import {fontVariables} from "@/lib/fonts";
 import {ThemeProvider} from "@/components/layout/theme-provider";
@@ -21,7 +21,7 @@ export default function RootLayout({
       <html lang="en" suppressHydrationWarning>
       <body
           className={cn(
-              'text-foreground font-sans antialiased group/body overscroll-none  [--footer-height:calc(var(--spacing)*14)] [--header-height:calc(var(--spacing)*14)] xl:[--footer-height:calc(var(--spacing)*24)]',
+              'text-foreground font-sans antialiased group/body overscroll-none  [--footer-height:calc(var(--spacing)*14)] [--header-height:calc(var(--spacing)*16)] xl:[--footer-height:calc(var(--spacing)*24)]',
               fontVariables,
           )}
       >

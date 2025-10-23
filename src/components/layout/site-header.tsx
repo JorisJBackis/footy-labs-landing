@@ -1,11 +1,11 @@
-import {ModeToggleInstant} from '@/components/layout/mode-toggle';
 import {Button} from '@/components/ui/button';
 import Link from 'next/link';
 import {siteConfig} from '@/lib/config';
-// import {Icons} from '@/components/ui/icons';
+import {Icons} from '@/components/icons';
 import {MainNav} from '@/components/layout/main-nav';
-import {Separator} from '@/components/ui/separator';
 import {MobileNav} from './mobile-nav';
+import {Separator} from "@/components/ui/separator";
+import {ModeToggleInstant} from "@/components/layout/mode-toggle";
 
 export function SiteHeader() {
   return (
@@ -14,7 +14,6 @@ export function SiteHeader() {
           <div
               className="3xl:container flex h-(--header-height) items-center gap-2 **:data-[slot=separator]:!h-4">
             <MobileNav
-                tree={{children: []} as any}
                 items={siteConfig.navItems}
                 className="flex lg:hidden"
             />
@@ -22,10 +21,10 @@ export function SiteHeader() {
                 asChild
                 variant="ghost"
                 size="icon"
-                className="hidden size-8 lg:flex"
+                className="hidden size-10 lg:flex"
             >
-              <Link href="/" className="bg-blue-900">
-                {/*<Icons.logo className="size-5"/>*/}
+              <Link href="/" className="flex">
+                <Icons.logo className="size-8 text-primary"/>
                 <span className="sr-only">{siteConfig.name}</span>
               </Link>
             </Button>
@@ -34,9 +33,14 @@ export function SiteHeader() {
               {/*<div>*/}
               {/*  <CommandMenu/>*/}
               {/*</div>*/}
+              {/*<ModeToggleInstant/>*/}
               {/*<Separator orientation="vertical"/>*/}
-              <ModeToggleInstant/>
-
+              <Button variant="outline" className="hidden sm:inline-flex">
+                Sign Up
+              </Button>
+              <Button>
+                Book a Demo
+              </Button>
             </div>
           </div>
         </div>

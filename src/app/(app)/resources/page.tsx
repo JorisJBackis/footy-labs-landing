@@ -1,7 +1,9 @@
+import {UnderDevelopment} from "@/components/under-development";
+
 export default function ResourcesPage() {
   return (
-      <div>
-        ResourcesPage
+      <div className="container-wrapper">
+        <UnderDevelopment/>
       </div>
   );
 }

@@ -1,7 +1,9 @@
+import {UnderDevelopment} from "@/components/under-development";
+
 export default function ContactPage() {
   return (
-      <div>
-        ContactPage
+      <div className="container-wrapper">
+        <UnderDevelopment/>
       </div>
   );
 }

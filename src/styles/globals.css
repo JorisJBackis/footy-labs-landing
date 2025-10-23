@@ -188,6 +188,33 @@
     }
 
     body {
-        @apply bg-background text-foreground;
+        @apply bg-background text-foreground antialiased;
+    }
+    h1 {
+        @apply text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground;
+    }
+    h2 {
+        @apply text-2xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-foreground;
+    }
+    h3 {
+        @apply text-xl md:text-3xl lg:text-4xl font-semibold text-foreground;
+    }
+    h4 {
+        @apply text-lg md:text-2xl font-semibold tracking-tight text-foreground;
+    }
+    h5 {
+        @apply text-base md:text-xl font-semibold text-foreground;
+    }
+    h6 {
+        @apply text-sm md:text-lg font-semibold text-foreground;
+    }
+
+    p {
+        @apply text-base md:text-lg leading-relaxed text-muted-foreground;
+    }
+
+    ul,
+    ol {
+        @apply list-disc list-inside ml-4;
     }
 }

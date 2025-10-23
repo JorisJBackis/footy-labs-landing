@@ -1,7 +1,9 @@
+import {UnderDevelopment} from "@/components/under-development";
+
 export default function ProductPlayersPage() {
   return (
-      <div>
-        ProductPlayersPage
+      <div className="container-wrapper">
+        <UnderDevelopment/>
       </div>
   );
 }

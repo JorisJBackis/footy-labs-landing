@@ -1,9 +1,9 @@
+import {HeroSection} from "@/components/home/sections";
+
 export default function HomePage() {
   return (
   <div className="container-wrapper">
-    <div className="container overflow-hidden">
-      HomePage
-    </div>
+    <HeroSection/>
   </div>
   );
 }

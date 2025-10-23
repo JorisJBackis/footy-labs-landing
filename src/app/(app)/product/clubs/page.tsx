@@ -1,7 +1,9 @@
+import {UnderDevelopment} from "@/components/under-development";
+
 export default function ProductClubsPage() {
   return (
-      <div>
-        ProductClubsPage
+      <div className="container-wrapper">
+        <UnderDevelopment/>
       </div>
   );
 }
