@@ -4,7 +4,6 @@ import {cn} from "@/lib/utils";
 import {fontVariables} from "@/lib/fonts";
 import {ThemeProvider} from "@/components/layout/theme-provider";
 import {Toaster} from "@/components/ui/sonner";
-import AppLayout from "@/components/layout/app-layout";
 
 export const metadata: Metadata = {
   title: "Footy Labs",
@@ -24,9 +23,7 @@ export default function RootLayout({
           )}
       >
       <ThemeProvider>
-        <AppLayout>
           {children}
-        </AppLayout>
         <Toaster position="top-center"/>
       </ThemeProvider>
       </body>
