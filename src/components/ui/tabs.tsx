@@ -65,7 +65,6 @@ function TabsTrigger({
                      }: React.ComponentProps<typeof TabsPrimitive.Trigger>) {
   const {value} = useStore();
   return (
-      // <div className="relative flex-1 items-center justify-center">
       <TabsPrimitive.Trigger
           data-slot="tabs-trigger"
           className={cn(
@@ -90,7 +89,6 @@ function TabsTrigger({
             null
         }
       </TabsPrimitive.Trigger>
-      // </div>
   )
 }
 
@@ -101,19 +99,18 @@ function TabsContent({
                      }: React.ComponentProps<typeof TabsPrimitive.Content>) {
   const {value} = useStore();
   return (
-      // <AnimatePresence mode={"wait"}>
-      <motion.div initial={{x: -200, opacity: 0}} animate={{x: 0, opacity: 1}} exit={{x: 200, opacity: 0}}
-                  transition={{duration: 0.2}}>
-        {/*<span>{value}</span>*/}
+      <AnimatePresence mode={"wait"}>
         <TabsPrimitive.Content
             data-slot="tabs-content"
             className={cn("flex-1 outline-none", className)}
             {...props}
         >
-          {children}
+          <motion.div initial={{x: -20, opacity: 0}} animate={{x: 0, opacity: 1}} exit={{x: 20, opacity: 0}}
+                      transition={{duration: 2}}>
+            {children}
+          </motion.div>
         </TabsPrimitive.Content>
-      </motion.div>
-      // </AnimatePresence>
+      </AnimatePresence>
   )
 }
 

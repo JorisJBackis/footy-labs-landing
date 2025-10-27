@@ -2,12 +2,13 @@
 
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {Card, CardDescription, CardHeader} from "@/components/ui/card";
+import bento from "@/components/home/bento/bento.module.scss";
 
 export function Bento() {
   return (
-      <section>
+      <section className={bento.bento}>
         <Tabs>
-          <TabsList>
+          <TabsList className={bento.bento__tabs}>
             <TabsTrigger value={"Clubs"}>Clubs</TabsTrigger>
             <TabsTrigger value={"Agents"}>Agents</TabsTrigger>
             <TabsTrigger value={"Players"}>Players</TabsTrigger>
