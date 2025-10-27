@@ -1,0 +1,111 @@
+@use "../../../styles/mixins" as *;
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.75rem, 0.489rem + 1.304vw, 1.5rem);
+
+  // TODO: Remove in prod
+  h1, h2, h3, h4, h5, h6, p {
+    transition: font-size 0.4s linear;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    gap: clamp(0.375rem, 0.245rem + 0.652vw, 0.75rem);
+  }
+
+  > .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.375rem, 0.245rem + 0.652vw, 0.75rem);
+
+    @include respond(sm) {
+      flex-direction: row;
+    }
+
+    button {
+      height: 3rem;
+    }
+  }
+}
+
+$outdent: 2.5rem;
+
+.stats {
+  width: 100%;
+  position:sticky;
+  inset-block-end: 0;
+  z-index:1;
+
+  padding: {
+    top: clamp(0.75rem, 0.489rem + 1.304vw, 1.5rem);
+    bottom: clamp(0.75rem, 0.489rem + 1.304vw, 1.5rem);
+  };
+  margin-top: clamp(0.75rem, 0.489rem + 1.304vw, 1.5rem);
+
+
+  display: none;
+  @include respond(lg) {
+    display: flex;
+  }
+  flex-direction: row;
+  gap: clamp(0.375rem, 0.245rem + 0.652vw, 0.75rem);
+
+  -webkit-mask-image: linear-gradient(
+                  to right,
+                  #0000,
+                  #000 #{$outdent},
+                  #000 calc(100% - #{$outdent}),
+                  #0000 100%
+  );
+  mask-image: linear-gradient(
+                  to right,
+                  #0000,
+                  #000 #{$outdent},
+                  #000 calc(100% - #{$outdent}),
+                  #0000 100%
+  );
+
+  &__logos {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+
+    gap: clamp(0.375rem, 0.245rem + 0.652vw, 0.75rem);
+
+
+    img {
+      transition: filter ease-out 250ms;
+      filter: grayscale(1);
+      @for $i from 2 through 6 {
+        &:nth-child(#{$i}) {
+          //background: red;
+          margin-left: -20;
+        }
+      }
+    }
+
+    img:hover {
+      filter: grayscale(0);
+    }
+  }
+
+  &__items {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > div {
+      display: flex;
+      align-items: center;
+      gap: clamp(0.375rem, 0.245rem + 0.652vw, 0.75rem);
+    }
+  }
+
+}

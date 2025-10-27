@@ -4,7 +4,9 @@ export const siteConfig = {
   ogImage: '',
   description:
       'Footy Labs - platform for players, agents and clubs',
-  links: {},
+  links: {
+    signUp: "https://app.footylabs.ai/auth/register"
+  },
   navItems: [
     {
       href: '/product',

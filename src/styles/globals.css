@@ -10,6 +10,11 @@
 }
 
 @theme inline {
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-2xl: 1536px;
     --breakpoint-3xl: 1600px;
 }
 
@@ -190,27 +195,37 @@
     body {
         @apply bg-background text-foreground antialiased;
     }
+}
+
+@layer base {
     h1 {
-        @apply text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground;
+        @apply text-[clamp(3rem,2.5091rem+2.1818vw,6rem)] font-bold tracking-tight text-foreground;
     }
+
     h2 {
-        @apply text-2xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-foreground;
+        @apply text-[clamp(2.25rem,1.875rem+1.5vw,5rem)] font-semibold tracking-tight text-foreground;
     }
+
     h3 {
-        @apply text-xl md:text-3xl lg:text-4xl font-semibold text-foreground;
+        @apply text-[clamp(1.25rem,1.125rem+1.25vw,4rem)] font-semibold text-foreground;
     }
+
     h4 {
-        @apply text-lg md:text-2xl font-semibold tracking-tight text-foreground;
+        @apply text-[clamp(1.125rem,1rem+1vw,2rem)] font-semibold tracking-tight text-foreground;
     }
+
     h5 {
-        @apply text-base md:text-xl font-semibold text-foreground;
+        @apply text-[clamp(1rem,0.875rem+0.75vw,1.5rem)] font-semibold text-foreground;
     }
+
     h6 {
-        @apply text-sm md:text-lg font-semibold text-foreground;
+        @apply text-[clamp(0.875rem,0.75rem+0.5vw,1.25rem)] font-semibold text-foreground;
     }
 
     p {
-        @apply text-base md:text-lg leading-relaxed text-muted-foreground;
+        @apply text-[clamp(1rem,0.875rem+0.5vw,1.125rem)] leading-relaxed
+        /*text-muted-foreground*/
+        ;
     }
 
     ul,
