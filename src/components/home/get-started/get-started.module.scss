@@ -1,0 +1,39 @@
+@use "../../../styles/constants" as *;
+
+.started {
+  display: flex;
+  flex-direction: column;
+  gap: calc($space-md * 2);
+
+  h3 {
+    text-align: center;
+  }
+
+
+  &__content {
+    display: flex;
+
+    &__roadmap {
+      flex-basis: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: $space-md;
+
+      > div {
+        display: flex;
+        gap: $space-md;
+
+
+        > div {
+          display: flex;
+          flex-direction: column;
+          gap: $space-sm;
+
+          > button {
+            margin-top: $space-sm;
+          }
+        }
+      }
+    }
+  }
+}

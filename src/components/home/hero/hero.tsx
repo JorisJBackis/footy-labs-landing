@@ -6,6 +6,7 @@ import {toast} from "sonner";
 import Image from "next/image";
 import {PlusIcon, Shield, UserIcon} from "lucide-react";
 
+// const h1 = ["Some", "Catchy", "Opening"]
 export function HeroSection() {
   return (
       <div className="relative">
@@ -74,7 +75,7 @@ export function StatsCoveredSection() {
           </div>
           <div>
             <Shield/>
-            <p><span>{1200}+</span> clubs/leagues stats</p>
+            <p><span>{400}+</span> clubs/leagues stats</p>
           </div>
           <div>
           </div>

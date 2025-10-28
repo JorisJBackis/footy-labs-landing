@@ -10,7 +10,7 @@ export function ClubsBento({bentoUniqueId}: { bentoUniqueId: string }) {
       <>
         {/* box-1 */}
         <div className="flex flex-col">
-          <div className="basis-1/2 flex flex-col gap-0.5 sm:gap-1.5">
+          <div className="basis-1/2 flex flex-col gap-1.5 sm:gap-1.5">
             <h6>Track Performance</h6>
             <p>Analyse players performance based off 40+ different metrics available on the platform</p>
           </div>
@@ -31,13 +31,13 @@ export function ClubsBento({bentoUniqueId}: { bentoUniqueId: string }) {
         </div>
 
         {/* box-3 */}
-        <div className="flex flex-col gap-0.5 sm:gap-1.5">
+        <div className="flex flex-col gap-1.5 sm:gap-1.5">
           <h6>Player Name</h6>
           <p
               className="text-muted-foreground">Performance Analysis - Position: Atacking Midfielder - League:
             Lihnunian A
             Lyga</p>
-          <div className="flex gap-3 w-full justify-between">
+          <div className="flex gap-3 w-full justify-between text-sm lg:text-base">
             <div className="flex flex-col gap-0.5 justify-center items-center">
               <span className="text-muted-foreground font-medium">Minutes</span>
               <span className="font-semibold text-primary">643</span>
@@ -62,13 +62,13 @@ export function ClubsBento({bentoUniqueId}: { bentoUniqueId: string }) {
           {
             players.map((playerData, index) => (
                 <div key={index} onClick={() => setPlayerIndex(index)}
-                     className="relative px-1 basis-[48%] flex justify-center items-center border rounded-md">
+                     className="relative min-h-9 px-4 py-2 basis-[48%] flex justify-center items-center border rounded-md">
                   <span className="text-center">{playerData.player_pos}</span>
                   {index === playerIndex ?
                       <motion.span
                           transition={{ease: "easeOut", duration: 0.3}}
                           layoutId={"player-button-1"} id={"player-button-1"}
-                          className="absolute w-full h-full inset-0 border border-primary rounded-md"></motion.span>
+                          className=" absolute w-full h-full inset-0 border border-primary rounded-md"></motion.span>
                       : null}
                 </div>
 

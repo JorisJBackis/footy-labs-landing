@@ -22,7 +22,7 @@ export function Bento({bentoUniqueId}: { bentoUniqueId: string }) {
             <TabsTrigger tabId={bentoUniqueId} value={"Players"}>Players</TabsTrigger>
           </TabsList>
           <TabsContent value={"Clubs"} className={bento.bento__content}>
-            <ClubsBento bentoUniqueId={bentoUniqueId}/>
+            <ClubsBento bentoUniqueId={bentoUniqueId} />
           </TabsContent>
           <TabsContent value={"Agents"} className={bento.bento__content}>
             <div className="bg-green-400">

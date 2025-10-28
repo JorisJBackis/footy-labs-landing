@@ -56,9 +56,9 @@ const testimonials = [
 const Testimonial05 = () => (
     <div className="flex justify-center items-center px-6">
       <div>
-        <h2 className="text-5xl font-semibold text-center tracking-[-0.03em]">
+        <h3 className="text-center">
           Trusted by Clubs
-        </h2>
+        </h3>
         <p className="mt-3 text-center text-muted-foreground text-xl">
           See how clubs are achieving more with us
         </p>
