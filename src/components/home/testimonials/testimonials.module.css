@@ -1,0 +1,10 @@
+.testimonials h3 {
+  text-align: center;
+}
+
+.slider > div {
+  display: flex;
+  gap: clamp(0.75rem, 0.489rem + 1.304vw, 1.5rem);
+}
+
+/*# sourceMappingURL=testimonials.module.css.map */

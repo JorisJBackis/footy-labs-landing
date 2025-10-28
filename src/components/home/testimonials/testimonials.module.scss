@@ -1,0 +1,15 @@
+@use "../../../styles/constants" as *;
+
+.testimonials {
+  h3 {
+    text-align: center;
+  }
+}
+
+.slider {
+  > div {
+    display: flex;
+    gap: $space-md;
+  }
+}
+

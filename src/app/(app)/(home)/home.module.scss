@@ -1,0 +1,7 @@
+@use "../../../styles/constants" as *;
+
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: calc($space-md * 4);
+}
