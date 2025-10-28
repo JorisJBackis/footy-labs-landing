@@ -3,9 +3,6 @@
   flex-direction: column;
   gap: clamp(0.75rem, 0.489rem + 1.304vw, 1.5rem);
 }
-.hero h1, .hero h2, .hero h3, .hero h4, .hero h5, .hero h6, .hero p {
-  transition: font-size 0.4s linear;
-}
 .hero > div {
   display: flex;
   flex-direction: column;
@@ -29,6 +26,7 @@
 }
 
 .stats {
+  margin-bottom: calc(clamp(0.75rem, 0.489rem + 1.304vw, 1.5rem) * 2);
   width: 100%;
   position: sticky;
   inset-block-end: 0;

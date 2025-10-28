@@ -195,7 +195,10 @@
     body {
         @apply bg-background text-foreground antialiased;
     }
+
+
 }
+
 
 @layer base {
     h1 {
@@ -223,9 +226,15 @@
     }
 
     p {
-        @apply text-[clamp(1rem,0.875rem+0.5vw,1.125rem)] leading-relaxed
+        @apply text-[clamp(0.875rem,0.875rem+0.5vw,1rem)] leading-relaxed;
         /*text-muted-foreground*/
-        ;
+
+    }
+
+
+    /*// TODO: Remove in prod*/
+    h1, h2, h3, h4, h5, h6, p {
+        @apply transition-[font-size] duration-[0.4s] ease-linear;
     }
 
     ul,
@@ -233,3 +242,4 @@
         @apply list-disc list-inside ml-4;
     }
 }
+

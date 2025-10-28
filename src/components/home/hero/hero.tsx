@@ -51,7 +51,7 @@ const leagueLogos = [
 
 export function StatsCoveredSection() {
   return (
-      <section className={`container overflow-hidden bg-background border-t ${sections.stats}`}>
+      <section className={`container overflow-hidden bg-background border-t border-b ${sections.stats}`}>
         <div className={sections.stats__logos}>
           {leagueLogos.map((logoSrc) => (
               <Image src={`/leagues/${logoSrc}`}

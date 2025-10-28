@@ -27,13 +27,15 @@ function Tabs({
               }: React.ComponentProps<typeof TabsPrimitive.Root>) {
   const {value, setValue} = useStore();
   return (
-      <TabsPrimitive.Root
-          data-slot="tabs"
-          className={cn("flex flex-col gap-2", className)}
-          value={value}
-          onValueChange={(value) => setValue(value)}
-          {...props}
-      />
+      <MotionConfig transition={{duration: 0.3}}>
+        <TabsPrimitive.Root
+            data-slot="tabs"
+            className={cn("flex flex-col gap-2", className)}
+            value={value}
+            onValueChange={(value) => setValue(value)}
+            {...props}
+        />
+      </MotionConfig>
   )
 }
 
@@ -55,14 +57,15 @@ function TabsList({
 
 const tabTextVariants = {
   active: {color: "var(--primary-foreground)"},
-  inactive: {color: "var(--foreground)"}
+  inactive: {color: "var(--muted-foreground)"}
 }
 
 function TabsTrigger({
+                       tabId,
                        className,
                        children,
                        ...props
-                     }: React.ComponentProps<typeof TabsPrimitive.Trigger>) {
+                     }: React.ComponentProps<typeof TabsPrimitive.Trigger> & { tabId: string }) {
   const {value} = useStore();
   return (
       <TabsPrimitive.Trigger
@@ -74,15 +77,15 @@ function TabsTrigger({
           )}
           {...props}
       >
-        <motion.div transition={{duration: 2, ease: "easeOut"}}
+        <motion.div initial={false} transition={{ease: "easeOut"}}
                     variants={tabTextVariants} animate={value === props.value ? "active" : "inactive"} className="z-50">
           {children}
         </motion.div>
         {value === props.value ? (
-                <motion.div layoutId="tab-bg" id="tab-bg"
+                <motion.div layoutId={`tab-bg-${tabId}`} id={`tab-bg-${tabId}`}
                             transition={{
                               ease: "easeOut",
-                              duration: 2
+
                             }} className="rounded-md absolute top-0 right-0 w-full h-full bg-primary">
                 </motion.div>
             ) :
@@ -104,9 +107,10 @@ function TabsContent({
             data-slot="tabs-content"
             className={cn("flex-1 outline-none", className)}
             {...props}
+            asChild={true}
         >
           <motion.div initial={{x: -20, opacity: 0}} animate={{x: 0, opacity: 1}} exit={{x: 20, opacity: 0}}
-                      transition={{duration: 2}}>
+                      transition={{}}>
             {children}
           </motion.div>
         </TabsPrimitive.Content>

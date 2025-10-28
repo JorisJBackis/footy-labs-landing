@@ -3,9 +3,9 @@ import {Bento} from "@/components/home/bento/bento";
 
 export default function HomePage() {
   return (
-  <div className="container-wrapper">
-    <Bento/>
-    <HeroSection/>
-  </div>
+      <div className="container-wrapper">
+        <HeroSection/>
+        <Bento bentoUniqueId="home-page"/>
+      </div>
   );
 }
