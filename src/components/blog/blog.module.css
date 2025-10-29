@@ -1,0 +1,35 @@
+.blogLayout {
+  display: flex;
+  flex-direction: column;
+  gap: calc(clamp(0.75rem, 0.489rem + 1.304vw, 1.5rem) * 2);
+}
+
+.blogContainer h1 {
+  font-size: clamp(1.25rem, 1.125rem + 1.25vw, 4rem);
+  font-weight: 600;
+}
+.blogContainer__layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.blogContainer__layout > span {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.375rem, 0.245rem + 0.652vw, 0.75rem);
+}
+.blogContainer__layout__tabs {
+  display: flex;
+  gap: calc(clamp(0.75rem, 0.489rem + 1.304vw, 1.5rem) / 4);
+  color: var(--muted-foreground);
+  list-style-type: none;
+}
+.blogContainer__layout__tabs a > p {
+  font-weight: 500;
+  padding: 0.45rem 0.75rem;
+  border-radius: 2rem;
+  background: var(--muted);
+}
+
+/*# sourceMappingURL=blog.module.css.map */

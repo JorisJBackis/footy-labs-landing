@@ -1,0 +1,45 @@
+@use "../../styles/constants" as *;
+
+.blogLayout {
+  display: flex;
+  flex-direction: column;
+  gap: calc($space-md * 2);
+}
+
+.blogContainer {
+
+  h1 {
+    font-size: clamp(1.25rem, 1.125rem + 1.25vw, 4rem);
+    font-weight: 600;
+  }
+
+  &__layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    > span {
+      display: flex;
+      flex-direction: column;
+      gap: $space-sm;
+    }
+
+    &__tabs {
+      display: flex;
+      gap: calc($space-md / 4);
+      color: var(--muted-foreground);
+      list-style-type: none;
+
+
+      a > p {
+        font-weight: 500;
+        padding: 0.45rem 0.75rem;
+        border-radius: 2rem;
+        background: var(--muted);
+      }
+    }
+  }
+
+
+}
