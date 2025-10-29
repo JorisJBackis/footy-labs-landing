@@ -51,7 +51,7 @@ export function ClubsBento({bentoUniqueId}: { bentoUniqueId: string }) {
               <span className="font-semibold text-primary">0</span>
             </div>
             <div className="flex flex-col gap-0.5 justify-center items-center">
-              <span className="text-muted-foreground font-medium text-center">Footylabs Score</span>
+              <span className="text-muted-foreground font-medium text-center">Footy Labs Score</span>
               <span className="font-semibold text-green-600">8.1</span>
             </div>
           </div>

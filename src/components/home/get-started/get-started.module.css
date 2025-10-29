@@ -8,6 +8,12 @@
 }
 .started__content {
   display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .started__content {
+    flex-direction: row;
+  }
 }
 .started__content__roadmap {
   flex-basis: 50%;

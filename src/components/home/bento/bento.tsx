@@ -22,7 +22,7 @@ export function Bento({bentoUniqueId}: { bentoUniqueId: string }) {
             <TabsTrigger tabId={bentoUniqueId} value={"Players"}>Players</TabsTrigger>
           </TabsList>
           <TabsContent value={"Clubs"} className={bento.bento__content}>
-            <ClubsBento bentoUniqueId={bentoUniqueId} />
+            <ClubsBento bentoUniqueId={bentoUniqueId}/>
           </TabsContent>
           <TabsContent value={"Agents"} className={bento.bento__content}>
             <div className="bg-green-400">
@@ -42,17 +42,31 @@ export function Bento({bentoUniqueId}: { bentoUniqueId: string }) {
             </div>
           </TabsContent>
           <TabsContent value={"Players"} className={bento.bento__content}>
-            <div className="bg-blue-400">
+            <div className="flex flex-col bg-blue-400">
+              <div className="basis-1/2 flex flex-col gap-1.5 sm:gap-1.5">
+                <h6>Track Performance</h6>
+                {/*<p>Analyse players performance based off 40+ different metrics available on the platform</p>*/}
+              </div>
+              {/*<BentoBadges badges={[]} className="flex-grow border-t pt-3">*/}
+                {/*<Badge variant={"outline"}>30 more...</Badge>*/}
+              {/*</BentoBadges>*/}
+            </div>
 
+            <div className="basis-1/2 flex flex-col gap-1.5 sm:gap-1.5">
+              <h6>Apply directly</h6>
+              <p>Profile showcase...</p>
             </div>
             <div>
-
+              <div className="basis-1/2 flex flex-col gap-1.5 sm:gap-1.5">
+                <h6>Make profile</h6>
+                <p>Profile showcase...</p>
+              </div>
             </div>
             <div>
-
-            </div>
-            <div>
-
+              <div className="basis-1/2 flex flex-col gap-1.5 sm:gap-1.5">
+                <h6>See club needs</h6>
+                <p>Club needs showcase...</p>
+              </div>
             </div>
           </TabsContent>
         </Tabs>

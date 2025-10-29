@@ -39,7 +39,8 @@ export function GetStarted() {
               </div>
             </div>
           </div>
-          <div>
+          {/* image */}
+          <div className="lg:hidden">
 
           </div>
         </div>
