@@ -1,10 +1,11 @@
 import {UnderDevelopment} from "@/components/under-development";
 import styles from "@/components/blog/blog.module.scss";
-import {getPosts} from "@/sanity/sanity-utils";
+import {getArticles, getChangelogPosts} from "@/sanity/sanity-utils";
 import {BlogItem} from "@/components/blog/blog-item";
 
 export default async function BlogPage() {
-  const posts = await getPosts();
+  const posts = await getChangelogPosts();
+  console.log(posts);
 
   return (
       <div>

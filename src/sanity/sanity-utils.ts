@@ -1,6 +1,6 @@
 import ImageUrlBuilder from "@sanity/image-url";
-import {createClient, type QueryParams} from "next-sanity";
-import {postQuery, postQueryBySlug} from "./sanity-query";
+import {type QueryParams} from "next-sanity";
+import {postQueryBySlug, postsByCategorySlugQuery} from "./sanity-query";
 import {Blog} from "@/sanity/types/blog";
 import {client} from "@/sanity/lib/client";
 
@@ -30,14 +30,16 @@ export async function sanityFetch<QueryResponse>({
   );
 }
 
-export const getPosts = async () => {
-  const data: Blog[] = await sanityFetch({
-    query: postQuery,
-    qParams: {},
-    tags: ["post", "author", "category"],
+export const getPostsByCategory = async (categorySlug: string) => {
+  return sanityFetch<Blog[]>({
+    query: postsByCategorySlugQuery,
+    qParams: {categorySlug},
+    tags: ["post", categorySlug],
   });
-  return data;
 };
+
+export const getArticles = async () => getPostsByCategory("articles");
+export const getChangelogPosts = async () => getPostsByCategory("changelog");
 
 export const getPostBySlug = async (slug: string) => {
   const data: Blog = await sanityFetch({

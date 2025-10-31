@@ -5,7 +5,7 @@ export const config: ClientConfig = {
   projectId: projectId,
   dataset: dataset,
   apiVersion: apiVersion,
-  useCdn: false,
+  useCdn: true,
   perspective: "published" as ClientPerspective,
 };
 

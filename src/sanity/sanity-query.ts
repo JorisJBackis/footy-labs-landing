@@ -1,4 +1,5 @@
-import { groq } from "next-sanity";
+import {groq} from "next-sanity";
+
 const postData = `{
   title,
   metadata,
@@ -15,6 +16,19 @@ const postData = `{
   publishedAt,
   body
 }`;
+
+export const postsByCategorySlugQuery = `
+  *[_type == "post" && $categorySlug in categories[]->slug.current] | order(publishedAt desc) {
+    _id,
+    title,
+    slug,
+    publishedAt,
+    author->{name, image},
+    mainImage,
+    categories[]->{title, slug},
+    body
+  }
+`;
 
 export const postQuery = groq`*[_type == "post"] ${postData}`;
 
