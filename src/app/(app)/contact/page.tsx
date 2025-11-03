@@ -19,7 +19,7 @@ export default function ContactPage() {
                 network and streamline operations, or a player seeking better career opportunities and exposure. You can
                 also reach out if you’re interested in becoming a partner and growing with us.</p>
             </div>
-            <div className="flex gap-(--space-sm) justify-center items-center">
+            <div className="flex gap-(--space-sm) justify-center items-center flex-col sm:flex-row">
               <Button variant="default"
                       className="h-12"
                   // onClick={() => {

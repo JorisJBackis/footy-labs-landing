@@ -2,14 +2,17 @@ export const contactData = {
   socials: {
     instagram: {
       label: "Instagram",
+      description: "Follow us for updates",
       href: "https://www.instagram.com/footylabs_official/"
     },
     linkedin: {
       label: "Linkedin",
+      description: "Connect professionally",
       href: "https://www.linkedin.com/company/footylabs/"
     },
     facebook: {
       label: "Facebook",
+      description: "Like our page",
       href: "https://www.facebook.com/people/Footy-Labs/61575324307648/"
     },
   },

@@ -11,27 +11,7 @@ export function ContactDetails() {
         <h2 className="text-center">Or contact us using details below</h2>
         <div className="flex flex-col sm:flex-row gap-(--space-md)">
           <ContactCards/>
-          <div className="basis-1/2">
-            <Card className="h-full">
-              <CardTitle className="px-6">Social</CardTitle>
-              <CardContent className="flex flex-col gap-4">
-                <Link href={contactData.socials.instagram.href} className="flex gap-2">
-                  <InstagramIcon/>
-                  {contactData.socials.instagram.label}
-                </Link>
-                <Link href={contactData.socials.facebook.href} className="flex gap-2">
-                  <FacebookIcon/>
-                  {contactData.socials.facebook.label}
-                </Link>
-                <Link href={contactData.socials.linkedin.href} className="flex gap-2">
-                  <LinkedinIcon/>
-                  {contactData.socials.linkedin.label}
-                </Link>
-              </CardContent>
-              <CardFooter className="mt-auto">Let's connect!</CardFooter>
-
-            </Card>
-          </div>
+          <Socials/>
         </div>
       </div>
   )
@@ -41,7 +21,7 @@ function ContactCards() {
   return (
       <div className="flex flex-col gap-(--space-md) basis-1/2">
         {Object.values(contactData.offices).map(({title, email, phone}, index) => (
-            <Card key={index}>
+            <Card key={index} className="">
               <CardTitle className="px-6">{title}</CardTitle>
               <CardContent className="flex flex-col gap-2">
                 <div className="flex items-center justify-center gap-4">
@@ -87,4 +67,47 @@ function ContactCards() {
         }
       </div>
   )
+}
+
+function Socials() {
+  return (
+      <div className="basis-1/2">
+        <Card className="h-full ">
+          <CardTitle className="px-6">Social</CardTitle>
+          <div className="flex flex-col gap-4 px-6">
+            {Object.values(contactData.socials).map(({label, description, href,}, index) => {
+              const Icon = getSocialIcon(label);
+              return (
+                  <Link key={index} href={href} className="flex items-center gap-4 group">
+                    <Icon size={28}/>
+                    <div className="flex flex-col">
+                <span className="group-hover:underline">
+              {label}
+                </span>
+                      <span className="text-muted-foreground">
+                                {description}
+                </span>
+                    </div>
+                  </Link>
+              )
+            })}
+
+          </div>
+          <CardFooter className="mt-auto text-muted-foreground border-t">Let's connect and grow together</CardFooter>
+        </Card>
+      </div>
+  )
+}
+
+function getSocialIcon(label: string) {
+  switch (label.toLowerCase()) {
+    case 'instagram' :
+      return InstagramIcon
+    case 'facebook':
+      return FacebookIcon
+    case 'linkedin':
+      return LinkedinIcon
+    default:
+      return InstagramIcon
+  }
 }
