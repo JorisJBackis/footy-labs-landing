@@ -9,6 +9,22 @@ export function imageBuilder(source: string) {
   return ImageUrlBuilder(client).image(source);
 }
 
+export function imageUrlFor(source: any, width = 400, height = 300) {
+  return imageBuilder(source)
+      .width(width)
+      .height(height)
+      .fit("crop") // ensures all images have the same aspect ratio
+      .url();
+}
+
+export function imageUrlForFixed(source: any, width = 400, height = 300) {
+  return imageBuilder(source)
+      .width(width)
+      .height(height)
+      .fit("crop") // crops to exact width/height
+      .url();
+}
+
 export async function sanityFetch<QueryResponse>({
                                                    query,
                                                    qParams,

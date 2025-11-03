@@ -19,7 +19,7 @@ const ImageComponent = ({ value }: { value: any }) => {
   if (!url) return null;
 
   return (
-      <div className="my-10 overflow-hidden rounded-[15px]">
+      <div className="my-10 overflow-hidden rounded-[15px] flex items-center justify-center">
         <Image
             src={url}
             width={width}
