@@ -4,6 +4,8 @@ import {Button} from "@/components/ui/button";
 import {toast} from "sonner";
 import {Card, CardContent, CardTitle} from "@/components/ui/card";
 import {ContactDetails} from "@/components/contact/contact-details";
+import {ContactDialog} from "@/components/contact/contact-dialog";
+import {CalCom} from "@/components/contact/cal-com";
 
 export default function ContactPage() {
   return (
@@ -20,22 +22,21 @@ export default function ContactPage() {
                 also reach out if you’re interested in becoming a partner and growing with us.</p>
             </div>
             <div className="flex gap-(--space-sm) justify-center items-center flex-col sm:flex-row">
-              <Button variant="default"
-                      className="h-12"
-                  // onClick={() => {
-                  //   toast.message("Book a demo is under development")
-                  // }}
-              >
-                Get a free 30 minute demo
-              </Button>
+              <ContactDialog>
+                <Button variant="default"
+                        className="h-12"
+                >
+                  Get a free 30 minute demo
+                </Button>
+              </ContactDialog>
+              <ContactDialog>
               <Button variant="outline"
                       className="h-12"
-                  // onClick={() => {
-                  //   toast.message("Book a demo is under development")
-                  // }}
               >
-                Speak to a founder
+                Explore Partnership
               </Button>
+            </ContactDialog>
+
             </div>
           </div>
           {/* Cards with contact details */}

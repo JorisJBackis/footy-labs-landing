@@ -5,6 +5,7 @@ import {Button} from "@/components/ui/button";
 import {toast} from "sonner";
 import Image from "next/image";
 import {PlusIcon, Shield, UserIcon} from "lucide-react";
+import {ContactDialog} from "@/components/contact/contact-dialog";
 
 // const h1 = ["Some", "Catchy", "Opening"]
 export function HeroSection() {
@@ -19,20 +20,18 @@ export function HeroSection() {
             {/*<UnderDevelopment/>*/}
           </div>
           <div className={sections.buttons}>
-            <Button variant="default"
-                    onClick={() => {
-                      toast.message("Book a demo is under development")
-                    }}
-            >
-              Get a free 30 minute demo
-            </Button>
-            <Button variant="outline"
-                    onClick={() => {
-                      toast.message("Book a demo is under development")
-                    }}
-            >
-              Speak to a founder
-            </Button>
+            <ContactDialog>
+              <Button variant="default"
+              >
+                Get a free 30 minute demo
+              </Button>
+            </ContactDialog>
+            <ContactDialog>
+              <Button variant="outline"
+              >
+                Explore Partnership
+              </Button>
+            </ContactDialog>
           </div>
           <Image width={1857} height={1016} src={"/club-needs.png"} alt="platform image"/>
         </section>

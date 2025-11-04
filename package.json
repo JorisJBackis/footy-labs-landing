@@ -9,6 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@calcom/atoms": "^1.12.1",
+    "@calcom/embed-react": "^1.5.3",
     "@hookform/resolvers": "^5.2.2",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-alert-dialog": "^1.1.15",
@@ -55,7 +57,7 @@
     "react-day-picker": "^9.11.1",
     "react-dom": "19.1.0",
     "react-fast-marquee": "^1.6.5",
-    "react-hook-form": "^7.65.0",
+    "react-hook-form": "^7.66.0",
     "react-resizable-panels": "^3.0.6",
     "recharts": "^2.15.4",
     "sanity": "^4.12.0",

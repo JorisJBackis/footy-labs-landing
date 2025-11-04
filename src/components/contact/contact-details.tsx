@@ -7,7 +7,7 @@ import {contactData} from "@/lib/contact-data";
 
 export function ContactDetails() {
   return (
-      <div className="flex flex-col gap-(--space-sm)">
+      <div className="flex flex-col gap-(--space-md)">
         <h2 className="text-center">Or contact us using details below</h2>
         <div className="flex flex-col sm:flex-row gap-(--space-md)">
           <ContactCards/>

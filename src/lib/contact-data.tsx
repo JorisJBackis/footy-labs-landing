@@ -1,3 +1,5 @@
+import {z} from "zod";
+
 export const contactData = {
   socials: {
     instagram: {
@@ -45,3 +47,66 @@ export const contactData = {
     },
   },
 };
+
+export const formSchema = z.object({
+  firstName: z
+      .string()
+      .min(2, {message: "First name must be at least 2 characters"})
+      .max(50, {message: "First name must be less than 50 characters"})
+      .regex(/^[a-zA-Z\s'-]+$/, {
+        message: "First name can only contain letters, spaces, hyphens, and apostrophes",
+      }),
+  lastName: z
+      .string()
+      .min(2, {message: "Last name must be at least 2 characters"})
+      .max(50, {message: "Last name must be less than 50 characters"})
+      .regex(/^[a-zA-Z\s'-]+$/, {
+        message: "Last name can only contain letters, spaces, hyphens, and apostrophes",
+      }),
+  email: z
+      .string()
+      .min(1, {message: "Email is required"})
+      .email({message: "Please enter a valid email address"})
+      .toLowerCase(),
+  country: z.string().min(1, {message: "Please select a country"}),
+  role: z.string().min(1, {message: "Please select a role"}),
+  organisation: z
+      .string()
+      .min(2, {message: "Organization name must be at least 2 characters"})
+      .max(100, {message: "Organization name must be less than 100 characters"}),
+})
+
+export type FormData = z.infer<typeof formSchema>
+
+export const COUNTRIES = [
+  "Lithuania",
+  "United Kingdom",
+  "Denmark",
+  "Finland",
+  "Sweden",
+  "Norway",
+  "Estonia",
+  "Latvia",
+  "Poland",
+  "Germany",
+  "Netherlands",
+  "Belgium",
+  "France",
+  "Spain",
+  "Italy",
+  "Portugal",
+  "Czech Republic",
+  "Austria",
+  "Switzerland",
+  "Ireland",
+  "Brazil",
+  "Other",
+] as const;
+
+export const ROLES = [
+  {value: "player", label: "Player"},
+  {value: "agent", label: "Agent"},
+  {value: "club-representative", label: "Club Representative"},
+  {value: "partner", label: "Partner"},
+  {value: "other", label: "Other"},
+] as const
