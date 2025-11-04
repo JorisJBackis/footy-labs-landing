@@ -16,8 +16,8 @@ export default function ResourcesPage() {
           <div className="flex flex-col gap-(--space-sm)  relative overflow-hidden">
             <h1 className="text-center">Footy Labs team</h1>
             {/*<div>*/}
-            <div className="w-screen -mt-[7.5rem] mr-[-50vw] relative left-1/2 right-1/2">
-              <div className={` ${styles.about} w-fit`}>
+            <div className="w-screen  mr-[-50vw] ml-[-50vw] relative left-1/2 right-1/2 sm:hidden">
+              <div className={` ${styles.about} w-full`}>
                 <Image src={"/saka.png"} alt={"saka"} width={650} height={630}/>
               </div>
             </div>
