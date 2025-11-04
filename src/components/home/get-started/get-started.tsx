@@ -1,5 +1,6 @@
 import styles from "@/components/home/get-started/get-started.module.scss";
 import {Button} from "@/components/ui/button";
+import {ContactDialog} from "@/components/contact/contact-dialog";
 
 export function GetStarted() {
   return (
@@ -34,8 +35,11 @@ export function GetStarted() {
               </div>
               <div>
                 <h6>Dedicated Onboarding</h6>
-                <p>Our team will guide you through the dashboard, helping you analyze, scout, and connect effortlessly.</p>
-                <Button>Get Started</Button>
+                <p>Our team will guide you through the dashboard, helping you analyze, scout, and connect
+                  effortlessly.</p>
+                <ContactDialog>
+                  <Button>Get Started</Button>
+                </ContactDialog>
               </div>
             </div>
           </div>

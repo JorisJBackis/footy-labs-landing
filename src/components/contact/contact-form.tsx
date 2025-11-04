@@ -100,7 +100,7 @@ export function ContactForm() {
             />
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid sm:grid-cols-2 gap-4">
             <Controller
                 name="email"
                 control={form.control}
@@ -187,13 +187,6 @@ export function ContactForm() {
         </FieldGroup>
 
         <div className="flex gap-3 pt-2">
-          <Button type="button" variant="outline" onClick={() => form.reset()} className="flex-1">
-            Reset
-          </Button>
-          <Button type="submit" form="contact-form" className="flex-1">
-            Submit Form
-          </Button>
-          {/* Pass all form values to CalCom */}
           <CalCom formData={formValues} isFormValid={isFormValid} />
         </div>
       </form>

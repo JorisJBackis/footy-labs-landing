@@ -7,6 +7,7 @@ import {MobileNav} from './mobile-nav';
 import {Separator} from "@/components/ui/separator";
 import {ModeToggleInstant} from "@/components/layout/mode-toggle";
 import {toast} from "sonner";
+import {ContactDialog} from "@/components/contact/contact-dialog";
 
 export function SiteHeader() {
   return (
@@ -41,13 +42,11 @@ export function SiteHeader() {
                   Sign Up
                 </Link>
               </Button>
-              <Button
-              //     onClick={() => {
-              //   toast.message("Book a demo is under development")
-              // }}
-              >
-                Book a Demo
-              </Button>
+              <ContactDialog>
+                <Button>
+                  Book a Demo
+                </Button>
+              </ContactDialog>
             </div>
           </div>
         </div>

@@ -21,14 +21,13 @@ export function ContactDialog({children}) {
           <DialogTrigger asChild>
             {children}
           </DialogTrigger>
-          <DialogContent>
+          <DialogContent className="">
             <DialogHeader>
-              <DialogTitle className="text-center">Book a free 30-minute product demo.</DialogTitle>
-              <DialogDescription className="text-center">See our platform in action. Get your questions
+              <DialogTitle className="text-center"><h4>Book a free 30-minute product demo.</h4></DialogTitle>
+              <DialogDescription className="text-center pt-(--space-sm) pb-(--space-md)">See our platform in action. Get your questions
                 answered.</DialogDescription>
             </DialogHeader>
             <ContactForm>
-
             </ContactForm>
           </DialogContent>
         </form>

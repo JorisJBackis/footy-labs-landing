@@ -47,13 +47,13 @@ export function CalCom({ formData, isFormValid }: CalComProps) {
   console.log(calConfig.prefill.notes)
   // console.log(formData.email);
   return (
-      <button
+      <Button
           data-cal-link={`sviatoslav-st9cwi/30min?email=${calConfig.prefill.email}&name=${calConfig.prefill.name}&notes=${calConfig.prefill.notes}`}
           data-cal-config={JSON.stringify(calConfig)}
           disabled={!isFormValid || !calLoaded}
-          className="flex-1"
+          className="flex-1 h-12"
       >
-        Schedule Meeting
-      </button>
+        Schedule a Meeting
+      </Button>
   );
 }``
