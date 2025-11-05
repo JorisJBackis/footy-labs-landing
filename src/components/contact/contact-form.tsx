@@ -23,7 +23,7 @@ import { formSchema, FormData, COUNTRIES, ROLES } from "@/lib/contact-data";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { CalCom } from "@/components/contact/cal-com";
 
-export function ContactForm() {
+export function ContactForm({setOpen}) {
   const formOptions: UseFormProps<FormData> = {
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -34,12 +34,14 @@ export function ContactForm() {
       role: "",
       organisation: "",
     },
+    mode: "onTouched"
   }
 
   const form = useForm<FormData>(formOptions);
   const formValues = form.watch(); // Watch all form values
 
   function onSubmit(data: z.infer<typeof formSchema>) {
+    setOpen(false);
     toast("You submitted the following values:", {
       description: (
           <pre className="bg-code text-code-foreground mt-2 w-[320px] overflow-x-auto rounded-md p-4">

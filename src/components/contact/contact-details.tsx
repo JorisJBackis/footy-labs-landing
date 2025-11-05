@@ -38,7 +38,7 @@ function ContactCards() {
                   </div>
                   <Copy
                       className="p-2 rounded-lg text-muted-foreground bg-muted ml-auto flex hover:text-primary transition-colors"
-                      textToCopy={""}>
+                      textToCopy={email.value}>
                     {/*<span className="mr-1 sm:block hidden text-sm">Copy</span>*/}
                   </Copy>
                 </div>
@@ -57,7 +57,7 @@ function ContactCards() {
                   </div>
                   <Copy
                       className="p-2 rounded-lg text-muted-foreground bg-muted ml-auto flex hover:text-primary transition-colors"
-                      textToCopy={"test"}>
+                      textToCopy={phone.value}>
                     {/*<span className="mr-1 sm:block hidden text-sm">Copy</span>*/}
                   </Copy>
                 </div>
@@ -78,7 +78,7 @@ function Socials() {
             {Object.values(contactData.socials).map(({label, description, href,}, index) => {
               const Icon = getSocialIcon(label);
               return (
-                  <Link key={index} href={href} className="flex items-center gap-4 group">
+                  <Link key={index} href={href} target="_blank" className="flex items-center gap-4 group">
                     <Icon size={28}/>
                     <div className="flex flex-col">
                 <span className="group-hover:underline">

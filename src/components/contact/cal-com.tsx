@@ -21,7 +21,7 @@ export function CalCom({ formData, isFormValid }: CalComProps) {
 
   useEffect(() => {
     (async function () {
-      const cal = await getCalApi();
+      const cal = await getCalApi({ namespace: "nynamespace" });
       cal("ui", {
         hideEventTypeDetails: false,
         layout: "month_view",
@@ -48,6 +48,7 @@ export function CalCom({ formData, isFormValid }: CalComProps) {
   // console.log(formData.email);
   return (
       <Button
+          type="submit"
           data-cal-link={`sviatoslav-st9cwi/30min?email=${calConfig.prefill.email}&name=${calConfig.prefill.name}&notes=${calConfig.prefill.notes}`}
           data-cal-config={JSON.stringify(calConfig)}
           disabled={!isFormValid || !calLoaded}
