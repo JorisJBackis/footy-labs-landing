@@ -11,10 +11,8 @@ import {players} from "@/components/home/bento/players-data";
 import {ClubsBento} from "@/components/home/bento/clubs-bento";
 
 
-export function Bento({bentoUniqueId}: { bentoUniqueId: string }) {
+export function Bento({bentoUniqueId}: { bentoUniqueId: string}) {
   return (
-      <section className={`container overflow-hidden ${bento.bento}`}>
-        <h3>Footy Labs - a platform for everyone involved in football</h3>
         <Tabs className={bento.bento__tabs}>
           <TabsList className={`bg-transparent ${bento.bento__tabslist}`}>
             <TabsTrigger tabId={bentoUniqueId} value={"Clubs"}>Clubs</TabsTrigger>
@@ -70,7 +68,6 @@ export function Bento({bentoUniqueId}: { bentoUniqueId: string }) {
             </div>
           </TabsContent>
         </Tabs>
-      </section>
   )
 }
 

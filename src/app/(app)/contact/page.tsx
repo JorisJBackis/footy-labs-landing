@@ -13,8 +13,8 @@ export default function ContactPage() {
         <div className="container flex flex-col gap-(--space-xl)">
           {/* Contact-hero */}
           <div className="flex flex-col gap-(--space-md)">
-            <div className="flex flex-col justify-center items-center">
-              <h1>Contact us</h1>
+            <div className="flex flex-col gap-(--space-sm) justify-center items-center">
+              <h1>Schedule a meeting with us</h1>
               <p className="text-center max-w-[37.5rem]">Contact us if you’re a club looking to discover and manage top
                 talent, an agent
                 aiming to expand your

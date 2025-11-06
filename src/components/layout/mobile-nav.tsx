@@ -6,6 +6,7 @@ import {useRouter} from "next/navigation"
 import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
 import {Button} from "@/components/ui/button";
 import {cn} from "@/lib/utils";
+import {siteConfig} from "@/lib/config";
 
 
 export function MobileNav({
@@ -77,12 +78,14 @@ export function MobileNav({
                 Platform
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button>
-                  Sign In
-                </Button>
-                <Button variant="outline">
-                  Sign Up
-                </Button>
+                <Link href={siteConfig.links.signUp}>
+                  <Button>
+                    Sign In
+                  </Button>
+                  <Button variant="outline">
+                    Sign Up
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

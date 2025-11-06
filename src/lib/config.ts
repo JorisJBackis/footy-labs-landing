@@ -13,12 +13,12 @@ export const siteConfig = {
       label: 'Product',
     },
     {
-      href: '/resources',
-      label: 'Resources',
-    },
-    {
       href: '/pricing',
       label: 'Pricing',
+    },
+    {
+      href: '/resources',
+      label: 'Resources',
     },
     {
       href: '/blog',
@@ -84,8 +84,6 @@ export const siteConfig = {
 
   ]
 };
-
-
 
 
 export const META_THEME_COLORS = {

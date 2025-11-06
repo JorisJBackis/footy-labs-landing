@@ -209,33 +209,31 @@
 
 @layer base {
     h1 {
-        @apply text-[clamp(3rem,2.5091rem+2.1818vw,6rem)] font-bold tracking-tight text-foreground;
+        @apply text-[clamp(2rem,1.6rem+1.5vw,3.5rem)] font-bold tracking-tight text-foreground;
     }
 
     h2 {
-        @apply text-[clamp(2.25rem,1.875rem+1.5vw,5rem)] font-semibold tracking-tight text-foreground;
+        @apply text-[clamp(1.75rem,1.5rem+1vw,2.75rem)] font-semibold tracking-tight text-foreground;
     }
 
     h3 {
-        @apply text-[clamp(1.25rem,1.125rem+1.25vw,4rem)] font-semibold text-foreground;
+        @apply text-[clamp(1.5rem,1.3rem+0.8vw,2.25rem)] font-semibold text-foreground;
     }
 
     h4 {
-        @apply text-[clamp(1.125rem,1rem+1vw,2rem)] font-semibold tracking-tight text-foreground;
+        @apply text-[clamp(1.25rem,1.1rem+0.6vw,1.75rem)] font-semibold tracking-tight text-foreground;
     }
 
     h5 {
-        @apply text-[clamp(1rem,0.875rem+0.75vw,1.5rem)] font-semibold text-foreground;
+        @apply text-[clamp(1.125rem,1rem+0.5vw,1.5rem)] font-semibold text-foreground;
     }
 
     h6 {
-        @apply text-[clamp(0.875rem,0.75rem+0.5vw,1.25rem)] font-semibold text-foreground;
+        @apply text-[clamp(1rem,0.9rem+0.4vw,1.25rem)] font-semibold text-foreground;
     }
 
     p {
-        @apply text-[clamp(0.875rem,0.875rem+0.5vw,1rem)] leading-relaxed;
-        /*text-muted-foreground*/
-
+        @apply text-[clamp(0.875rem,0.85rem+0.1vw,1rem)] leading-relaxed text-muted-foreground;
     }
 
 

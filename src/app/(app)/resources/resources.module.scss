@@ -1,13 +1,23 @@
 .about {
   --scale: 0.9;
-  --x: 50%;
-  --y: 15%;
+  --x: 0%;
+  --y: -65%;
+  //transform: scale(var(--scale)) scaleY(86.6%) skewX(8deg) rotateZ(349deg);
   transform: scale(var(--scale)) scaleY(86.6%) skewX(8deg) rotateZ(349deg) translate(var(--x), var(--y));
+  position: absolute;
+  top:50%;
+  left:50%;
+  filter: grayscale(0.2);
+  transition: filter 0.2s ease-out;
+  &:hover {
+  filter: grayscale(0.01);
+
+  }
 
   &:after {
     content: "";
     background: linear-gradient(to top, var(--color-background), transparent 128px), linear-gradient(to right, var(--color-background), transparent 128px);
     position: absolute;
-    inset: 0;
+  inset:0
   }
 }
