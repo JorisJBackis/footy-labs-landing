@@ -16,7 +16,7 @@ export function StaggeredBlurText({
                            style={{
                              whiteSpace: 'pre-wrap',
                              display: 'inline-block',
-                             // Force hardware acceleration
+                              // Force hardware acceleration
                              willChange: 'transform, opacity'
                            }}
                            initial={{
