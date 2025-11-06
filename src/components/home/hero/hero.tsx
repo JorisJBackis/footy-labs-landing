@@ -6,38 +6,60 @@ import {toast} from "sonner";
 import Image from "next/image";
 import {PlusIcon, Shield, UserIcon} from "lucide-react";
 import {ContactDialog} from "@/components/contact/contact-dialog";
-import {StaggeredBlurText} from "@/components/text";
+import {StaggerBlurElement, StaggeredBlurText} from "@/components/text";
+import {splitBySpace} from "@/lib/utils";
 
-// const h1 = ["Some", "Catchy", "Opening"]
+const delayStep = 0.1;
+const heading = 'Some catchy opening.';
+const headingDelay = 0;
+const p = 'Some text about our product. It\'s cool - trust. Maybe some more text. But it\'s cool anyway.';
+// const pDelay = headingDelay + splitBySpace(heading).length * delayStep; // 0 + 3 * 0.1 - corresponds to actual delay, no pause
+const pDelay = headingDelay + splitBySpace(heading).length * delayStep + 0.2; // 0 + 3 * 0.1 - corresponds to actual delay, no pause
+const buttonsDelay = headingDelay + pDelay + 0.2;
+
 export function HeroSection() {
   return (
       <div className="relative">
         <section className={`container overflow-hidden ${sections.hero}`}>
           <div className="">
             <h1 className="">
-              <StaggeredBlurText textArr={'Some catchy opening'.split(" ")}>
+              <StaggeredBlurText textArr={splitBySpace(heading)}>
               </StaggeredBlurText>
             </h1>
-            <p>Some text about our product. It's cool - trust. Maybe some more text. But it's cool anyway.</p>
+            <p>
+              <StaggerBlurElement initDelay={pDelay}>
+                {p}
+              </StaggerBlurElement>
+            </p>
             {/*<UnderDevelopment/>*/}
           </div>
           <div className={sections.buttons}>
-            <ContactDialog>
-              <Button variant="default"
-              >
-                Get a free 30 minute demo
-              </Button>
-            </ContactDialog>
-            <ContactDialog>
-              <Button variant="outline"
-              >
-                Explore Partnership
-              </Button>
-            </ContactDialog>
+            <StaggerBlurElement initDelay={buttonsDelay}>
+              <ContactDialog>
+                <Button variant="default"
+                >
+                  Get a free 30 minute demo
+                </Button>
+              </ContactDialog>
+            </StaggerBlurElement>
+            <StaggerBlurElement initDelay={buttonsDelay + 0.2}>
+              <ContactDialog>
+                <Button variant="outline"
+                >
+                  Explore Partnership
+                </Button>
+              </ContactDialog>
+            </StaggerBlurElement>
           </div>
-          <Image width={1857} height={1016} src={"/club-needs.png"} alt="platform image"/>
+          <StaggerBlurElement initDelay={buttonsDelay + 0.2 + 0.2}>
+            <Image width={1857} height={1016} src={"/club-needs.png"} alt="platform image"/>
+          </StaggerBlurElement>
+
         </section>
-        <StatsCoveredSection/>
+        <StaggerBlurElement initDelay={buttonsDelay + 0.2 + 0.2 + 0.2}>
+
+          <StatsCoveredSection/>
+        </StaggerBlurElement>
       </div>
   )
 }
