@@ -6,6 +6,7 @@ import {toast} from "sonner";
 import Image from "next/image";
 import {PlusIcon, Shield, UserIcon} from "lucide-react";
 import {ContactDialog} from "@/components/contact/contact-dialog";
+import {StaggeredBlurText} from "@/components/text";
 
 // const h1 = ["Some", "Catchy", "Opening"]
 export function HeroSection() {
@@ -14,7 +15,8 @@ export function HeroSection() {
         <section className={`container overflow-hidden ${sections.hero}`}>
           <div className="">
             <h1 className="">
-              Some catchy opening
+              <StaggeredBlurText textArr={'Some catchy opening'.split(" ")}>
+              </StaggeredBlurText>
             </h1>
             <p>Some text about our product. It's cool - trust. Maybe some more text. But it's cool anyway.</p>
             {/*<UnderDevelopment/>*/}

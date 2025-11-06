@@ -1,9 +1,14 @@
 import {getPostBySlug} from "@/sanity/sanity-utils";
 import RenderBodyContent from "@/components/blog/render-body-content";
+import {notFound} from 'next/navigation'
 
 export default async function SingleBlogPage({params}: { params: any }) {
   const {slug} = await params;
   const post = await getPostBySlug(slug);
+
+  if (!post) {
+    notFound();
+  }
 
   return (
       <div className="container-wrapper">
