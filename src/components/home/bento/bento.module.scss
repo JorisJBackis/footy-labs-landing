@@ -50,9 +50,10 @@
 
     @for $i from 1 through 4 {
       > div:nth-child(#{$i}) {
-        @include respond(lg) {
+        //@include respond(lg) {
+        //  border: var(--border) solid 1px;
+        //}
           border: var(--border) solid 1px;
-        }
         border-radius: 0.375rem;
         grid-area: box-#{$i};
         padding: $space-md

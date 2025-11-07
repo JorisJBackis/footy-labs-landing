@@ -2,7 +2,7 @@ export const plans = [
   {
     name: "For Players",
     description: "Build your profile, track your progress, and unlock new opportunities.",
-    price: "€799",
+    price: "€299",
     period: "/month",
     features: [
       "Personal performance dashboard",

@@ -29,7 +29,7 @@ export function Copy({
 
   return (
       <button
-          className={cn(className, "flex items-center gap-0.5 hover:opacity-75 transition-all hover:text-primary")}
+          className={cn(className, "flex items-center gap-0.5 hover:opacity-75 transition-all hover:text-primary cursor-pointer")}
           {...props}
           onClick={handleCopy}
       >

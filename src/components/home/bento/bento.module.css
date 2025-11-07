@@ -39,42 +39,26 @@
     grid-template-areas: "box-1 box-1 box-1 box-1 box-3 box-3 box-3 box-3 box-3 box-3 box-3 box-3" "box-1 box-1 box-1 box-1 box-2 box-2 box-2 box-2 box-2 box-2 box-2 box-2" "box-4 box-4 box-4 box-4 box-2 box-2 box-2 box-2 box-2 box-2 box-2 box-2";
   }
 }
-@media (min-width: 1024px) {
-  .bento__content > div:nth-child(1) {
-    border: var(--border) solid 1px;
-  }
-}
 .bento__content > div:nth-child(1) {
+  border: var(--border) solid 1px;
   border-radius: 0.375rem;
   grid-area: box-1;
   padding: clamp(0.75rem, 0.489rem + 1.304vw, 1.5rem);
 }
-@media (min-width: 1024px) {
-  .bento__content > div:nth-child(2) {
-    border: var(--border) solid 1px;
-  }
-}
 .bento__content > div:nth-child(2) {
+  border: var(--border) solid 1px;
   border-radius: 0.375rem;
   grid-area: box-2;
   padding: clamp(0.75rem, 0.489rem + 1.304vw, 1.5rem);
 }
-@media (min-width: 1024px) {
-  .bento__content > div:nth-child(3) {
-    border: var(--border) solid 1px;
-  }
-}
 .bento__content > div:nth-child(3) {
+  border: var(--border) solid 1px;
   border-radius: 0.375rem;
   grid-area: box-3;
   padding: clamp(0.75rem, 0.489rem + 1.304vw, 1.5rem);
 }
-@media (min-width: 1024px) {
-  .bento__content > div:nth-child(4) {
-    border: var(--border) solid 1px;
-  }
-}
 .bento__content > div:nth-child(4) {
+  border: var(--border) solid 1px;
   border-radius: 0.375rem;
   grid-area: box-4;
   padding: clamp(0.75rem, 0.489rem + 1.304vw, 1.5rem);
