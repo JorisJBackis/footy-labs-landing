@@ -42,21 +42,21 @@ export function ContactForm({setOpen}) {
 
   function onSubmit(data: z.infer<typeof formSchema>) {
     setOpen(false);
-    toast("You submitted the following values:", {
-      description: (
-          <pre className="bg-code text-code-foreground mt-2 w-[320px] overflow-x-auto rounded-md p-4">
-          <code>{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-      position: "bottom-right",
-      classNames: {
-        content: "flex flex-col gap-2",
-      },
-      style: {
-        "--border-radius": "calc(var(--radius) + 4px)",
-      } as React.CSSProperties,
-    })
-  }
+  //   toast("You submitted the following values:", {
+  //     description: (
+  //         <pre className="bg-code text-code-foreground mt-2 w-[320px] overflow-x-auto rounded-md p-4">
+  //         <code>{JSON.stringify(data, null, 2)}</code>
+  //       </pre>
+  //     ),
+  //     position: "bottom-right",
+  //     classNames: {
+  //       content: "flex flex-col gap-2",
+  //     },
+  //     style: {
+  //       "--border-radius": "calc(var(--radius) + 4px)",
+  //     } as React.CSSProperties,
+  //   })
+  // }
 
   // Check if form is valid to enable Cal.com button
   const isFormValid = form.formState.isValid;
