@@ -35,7 +35,7 @@ export function BlogItem({blog}: { blog: Blog }) {
           {/*      className="object-cover"*/}
           {/*  />*/}
           {/*</div>*/}
-          <p className=" font-normal text-gray-600 max-w-1/3">
+          <p className=" font-normal text-gray-600 sm:max-w-1/3 text-center sm:text-start">
             {blog.metadata?.slice(0, 140)}Article metadata...Article metadata...Article metadata...Article metadata...Article metadata...Article metadata...Article metadata...Article metadata...
           </p>
         </article>

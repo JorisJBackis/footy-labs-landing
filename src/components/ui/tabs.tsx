@@ -78,7 +78,7 @@ function TabsTrigger({
           {...props}
       >
         <motion.div initial={false} transition={{ease: "easeOut"}}
-                    variants={tabTextVariants} animate={value === props.value ? "active" : "inactive"} className="z-50">
+                    variants={tabTextVariants} animate={value === props.value ? "active" : "inactive"} className="z-[49]">
           {children}
         </motion.div>
         {value === props.value ? (

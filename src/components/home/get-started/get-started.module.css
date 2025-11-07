@@ -9,6 +9,7 @@
 .started__content {
   display: flex;
   flex-direction: column;
+  gap: var(--space-xl);
 }
 @media (min-width: 1024px) {
   .started__content {

@@ -10,33 +10,30 @@ export function AgentsBento() {
 
 
           </div>
-          <BentoBadges badges={[
-            "Position",
-            "Age Range",
-            "Preferred Foot",
-            "Market Value",
-            "Playing Style",
-            "Physical Attributes",
-            "Availability Status",
-            "Transfer Interest",
-            "League Experience",
-            "Player Role",
-            "Salary Range",
-            "20+ more...",
-          ]} className="flex-grow border-t pt-3">
-          </BentoBadges>
+
 
         </div>
 
         <div>
+
           Coming soon!
         </div>
         <div>
           Coming soon!
           {/*<BentoBadges badges={} />*/}
         </div>
-        <div>
-          Coming soon!
+        <div className="flex flex-col gap-(--space-sm)">
+          <h6>Manage Data in One Place</h6>
+          <BentoBadges badges={[
+            "Player Profiles",
+            "Contracts",
+            "Market Values",
+            "Transfer History",
+            "Club Contacts",
+            "Injury Records",
+            // "Scouting Notes",
+          ]} className="flex-grow border-t pt-3">
+          </BentoBadges>
         </div>
       </>
   )
