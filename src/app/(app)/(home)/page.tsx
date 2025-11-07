@@ -13,7 +13,7 @@ export default function HomePage() {
           <h3>Footy Labs - a platform for everyone involved in football</h3>
           <Bento bentoUniqueId="home-page"/>
         </section>
-          <Testimonials/>
+          {/*<Testimonials/>*/}
           <GetStarted/>
       </div>
 );

@@ -56,7 +56,7 @@ export function ContactForm({setOpen}) {
   //       "--border-radius": "calc(var(--radius) + 4px)",
   //     } as React.CSSProperties,
   //   })
-  // }
+  }
 
   // Check if form is valid to enable Cal.com button
   const isFormValid = form.formState.isValid;

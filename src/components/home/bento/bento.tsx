@@ -10,6 +10,7 @@ import {useState} from "react";
 import {players} from "@/components/home/bento/players-data";
 import {ClubsBento} from "@/components/home/bento/clubs-bento";
 import {PlayersBento} from "@/components/home/bento/players-bento";
+import {AgentsBento} from "@/components/home/bento/agents-bento";
 
 
 export function Bento({bentoUniqueId}: { bentoUniqueId: string}) {
@@ -24,21 +25,7 @@ export function Bento({bentoUniqueId}: { bentoUniqueId: string}) {
             <ClubsBento bentoUniqueId={bentoUniqueId}/>
           </TabsContent>
           <TabsContent value={"Agents"} className={bento.bento__content}>
-            <div className="bg-green-400">
-              Coming soon!
-
-            </div>
-            <div>
-              Coming soon!
-            </div>
-            <div>
-              Coming soon!
-              {/*<BentoBadges badges={} />*/}
-            </div>
-            <div>
-              Coming soon!
-
-            </div>
+            <AgentsBento />
           </TabsContent>
           <TabsContent value={"Players"} className={bento.bento__content}>
             <PlayersBento />
