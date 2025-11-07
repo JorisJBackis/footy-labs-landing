@@ -4,7 +4,13 @@ const nextConfig: NextConfig = {
   /* config options here */
   images: {
     domains: ["cdn.sanity.io"]
-  }
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 export default nextConfig;

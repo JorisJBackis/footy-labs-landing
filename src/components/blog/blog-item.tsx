@@ -96,7 +96,7 @@ export function ChangelogItemList({blog}: { blog: Blog }) {
         {/* Content */}
         <div className="ml-10 pb-12">
           <time
-              className="text-xs font-mono uppercase tracking-wider text-muted-foreground mb-3 block">{blog.date}</time>
+              className="text-xs font-mono uppercase tracking-wider text-muted-foreground mb-3 block">{blog.publishedAt}</time>
 
           <Card
               className="p-6 hover:shadow-lg transition-all duration-300 border-border/50 group-hover:border-primary/20">
@@ -108,7 +108,7 @@ export function ChangelogItemList({blog}: { blog: Blog }) {
                 </h3>
 
                 {blog.metadata && (
-                    <p className="text-muted-foreground leading-relaxed text-pretty">{blog.description}</p>
+                    <p className="text-muted-foreground leading-relaxed text-pretty">{blog.metadata}</p>
                 )}
 
                 {blog.tags && blog.tags.length > 0 && (

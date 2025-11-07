@@ -15,7 +15,7 @@ import {useState} from "react";
 
 
 
-export function ContactDialog({children}) {
+export function ContactDialog({children} : { children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
   return (
       <Dialog open={open} onOpenChange={setOpen}>
