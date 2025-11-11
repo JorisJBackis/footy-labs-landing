@@ -2,7 +2,7 @@ export const plans = [
   {
     name: "For Players",
     description: "Build your profile, track your progress, and unlock new opportunities.",
-    price: "€299",
+    price: "€99",
     period: "/month",
     features: [
       "Personal performance dashboard",
@@ -17,7 +17,7 @@ export const plans = [
   {
     name: "For Agents",
     description: "Manage your players efficiently and grow your agency with data-driven tools.",
-    price: "€1,899",
+    price: "€199",
     period: "/month",
     features: [
       "Client and contract management",
@@ -32,7 +32,7 @@ export const plans = [
   {
     name: "For Clubs",
     description: "A complete management platform for squads, scouting, and recruitment.",
-    price: "€3,499",
+    price: "€299",
     period: "/month",
     features: [
       "Squad and player management system",

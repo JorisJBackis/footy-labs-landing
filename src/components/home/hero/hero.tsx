@@ -10,9 +10,9 @@ import {StaggerBlurElement, StaggeredBlurText} from "@/components/text";
 import {splitBySpace} from "@/lib/utils";
 
 const delayStep = 0.1;
-const heading = 'Some catchy opening.';
+const heading = 'AI-driven matchmaking for clubs, agents & players';
 const headingDelay = 0;
-const p = 'Some text about our product. It\'s cool - trust. Maybe some more text. But it\'s cool anyway.';
+const p = 'Discover talent, manage your network, and make smarter decisions, all in one place.';
 // const pDelay = headingDelay + splitBySpace(heading).length * delayStep; // 0 + 3 * 0.1 - corresponds to actual delay, no pause
 const pDelay = headingDelay + splitBySpace(heading).length * delayStep + 0.2; // 0 + 3 * 0.1 - corresponds to actual delay, no pause
 const buttonsDelay = headingDelay + pDelay + 0.2;

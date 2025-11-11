@@ -1,4 +1,4 @@
-import {teamMembers} from "@/lib/resources-data";
+import {teamMembers} from "@/lib/about-us-data";
 
 export function Team() {
   return (

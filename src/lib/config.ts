@@ -17,8 +17,8 @@ export const siteConfig = {
       label: 'Pricing',
     },
     {
-      href: '/resources',
-      label: 'Resources',
+      href: '/about-us',
+      label: 'About Us',
     },
     {
       href: '/blog',
@@ -38,8 +38,8 @@ export const siteConfig = {
           label: 'Product',
         },
         {
-          href: '/resources',
-          label: 'Resources',
+          href: '/about-us',
+          label: 'About Us',
         },
         {
           href: '/blog',

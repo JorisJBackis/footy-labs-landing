@@ -3,14 +3,20 @@ import {FacebookIcon, InstagramIcon, LinkedinIcon, MailIcon, PhoneIcon} from "lu
 import Link from "next/link";
 import {Copy} from "@/components/contact/copy";
 import {contactData} from "@/lib/contact-data";
+import {EmailContactForm} from "@/components/contact/email-contact-form";
 
 
 export function ContactDetails() {
   return (
       <div className="flex flex-col gap-(--space-md)">
-        <h2 className="text-center">Or contact us using details below</h2>
-        <div className="flex flex-col sm:flex-row gap-(--space-md)">
-          <ContactCards/>
+        <h2 className="text-center">Or contact us using form below</h2>
+        <div className="flex flex-col md:flex-row gap-(--space-md)">
+          {/*<ContactCards/>*/}
+          <div className="flex flex-col gap-(--space-md) 3xl:basis-1/2 basis-2/3">
+            <Card className="px-6">
+              <EmailContactForm/>
+            </Card>
+          </div>
           <Socials/>
         </div>
       </div>
@@ -71,7 +77,7 @@ function ContactCards() {
 
 function Socials() {
   return (
-      <div className="basis-1/2">
+      <div className="basis-1/3 3xl:basis-1/2">
         <Card className="h-full ">
           <CardTitle className="px-6">Social</CardTitle>
           <div className="flex flex-col gap-4 px-6">

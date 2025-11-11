@@ -10,7 +10,7 @@ export default function HomePage() {
       <div className={`container-wrapper ${home.home}`}>
         <HeroSection/>
         <section className={`container overflow-hidden ${bento.bento}`}>
-          <h3>Footy Labs - a platform for everyone involved in football</h3>
+          <h3>Built for every side of the game.</h3>
           <Bento bentoUniqueId="home-page"/>
         </section>
           {/*<Testimonials/>*/}

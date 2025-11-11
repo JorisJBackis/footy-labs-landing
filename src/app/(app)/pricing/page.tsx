@@ -16,12 +16,12 @@ export default function PricingPage() {
 
           <PricingCards plans={plans}/>
 
-          <div className=" text-center">
-            <p className="text-sm text-muted-foreground">
-              {`All plans include a 14-day free trial. `}
-              <Link className="hover:underline text-foreground" href={siteConfig.links.signUp}>Sign Up</Link>
-            </p>
-          </div>
+          {/*<div className=" text-center">*/}
+          {/*  <p className="text-sm text-muted-foreground">*/}
+          {/*    {`All plans include a 14-day free trial. `}*/}
+          {/*    <Link className="hover:underline text-foreground" href={siteConfig.links.signUp}>Sign Up</Link>*/}
+          {/*  </p>*/}
+          {/*</div>*/}
         </div>
       </div>
   )

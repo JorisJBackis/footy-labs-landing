@@ -14,6 +14,7 @@
   &__content {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: var(--space-xl);
 
     @include respond(lg) {

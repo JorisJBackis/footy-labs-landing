@@ -1,15 +1,15 @@
 import {UnderDevelopment} from "@/components/under-development";
-import {Team} from "@/components/resources/team";
+import {Team} from "@/components/about-us/team";
 import {getArticles} from "@/sanity/sanity-utils";
 import React from "react";
 import {BlogItem} from "@/components/blog/blog-item";
 import {Separator} from "@/components/ui/separator";
-import {LatestArticles} from "@/components/resources/latest-articles";
-import {OurCraft} from "@/components/resources/our-craft";
+import {LatestArticles} from "@/components/about-us/latest-articles";
+import {OurCraft} from "@/components/about-us/our-craft";
 import Image from "next/image";
-import styles from "./resources.module.scss";
+import styles from "./about-us.module.scss";
 
-export default function ResourcesPage() {
+export default function AboutUsPage() {
   return (
       <div className="container-wrapper">
         <div className="container flex flex-col gap-(--space-xl) ">

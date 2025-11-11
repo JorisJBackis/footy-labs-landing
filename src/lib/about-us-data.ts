@@ -7,22 +7,22 @@ export interface TeamMember {
 
 export const teamMembers: TeamMember[] = [
   {
-    name: "Danius Jean Backis",
+    name: "Danius",
     role: "Co-founder, CEO",
     // imageUrl: "/team/danius.jpg", // Optional: add actual image paths
   },
   {
-    name: "Joris Jean Backis",
+    name: "Joris",
     role: "Junior Software Developer",
     // imageUrl: "/team/jane.jpg",
   },
   {
-    name: "Nadjib Benlaldj",
+    name: "Nadjib",
     role: "Head of AI",
     // imageUrl: "/team/mike.jpg",
   },
   {
-    name: "Evelina Molis",
+    name: "Evelina",
     role: "Marketing Specialist",
     // imageUrl: "/team/sarah.jpg",
   },
@@ -32,12 +32,22 @@ export const teamMembers: TeamMember[] = [
     // imageUrl: "/team/alex.jpg",
   },
   {
-    name: "Vygantas Skestenis",
-    role: "Chief Business Development Officer",
+    name: "Sviatoslav",
+    role: "Junior Software Developer",
     // imageUrl: "/team/emma.jpg",
   },
   {
-    name: "Sviatoslav Zubrytskyi",
+    name: "Roman",
+    role: "Junior Software Developer",
+    // imageUrl: "/team/emma.jpg",
+  },
+  {
+    name: "Gertruda",
+    role: "Junior Software Developer",
+    // imageUrl: "/team/emma.jpg",
+  },
+  {
+    name: "Saule",
     role: "Junior Software Developer",
     // imageUrl: "/team/emma.jpg",
   },

@@ -107,7 +107,7 @@ export function PlayersBento() {
 
         <div>
           <div className="basis-1/2 flex flex-col gap-(--space-sm)">
-            <div className="bg-muted flex flex-col p-(--space-sm) transition-shadow shadow-sm gap-(--space-sm) rounded-md text-muted-foreground">
+            <div className="bg-muted flex flex-col p-(--space-sm) border gap-(--space-sm) rounded-md text-muted-foreground">
               <div className="flex justify-between items-center">
                 <div className="flex gap-(--space-sm) items-center">
                   <Avatar>

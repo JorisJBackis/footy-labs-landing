@@ -5,7 +5,7 @@ import {ContactDialog} from "@/components/contact/contact-dialog";
 export function GetStarted() {
   return (
       <section className={`container overflow-hidden ${styles.started}`}>
-        <h3>Footy Labs - a platform for everyone involved in football</h3>
+        <h3>Join in 3 easy steps</h3>
         <div className={styles.started__content}>
           <div className={styles.started__content__roadmap}>
             <div>

@@ -9,6 +9,7 @@
 .started__content {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: var(--space-xl);
 }
 @media (min-width: 1024px) {

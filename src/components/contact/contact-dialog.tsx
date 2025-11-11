@@ -15,11 +15,11 @@ import {useState} from "react";
 
 
 
-export function ContactDialog({children} : { children: React.ReactNode }) {
+export function ContactDialog({children, className} : { children: React.ReactNode, className?: string }) {
   const [open, setOpen] = useState(false);
   return (
       <Dialog open={open} onOpenChange={setOpen}>
-        <form>
+        <form className={className}>
           <DialogTrigger asChild>
             {children}
           </DialogTrigger>
