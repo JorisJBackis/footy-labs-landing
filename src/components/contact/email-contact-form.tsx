@@ -1,13 +1,13 @@
 "use client"
 
-import { zodResolver } from "@hookform/resolvers/zod"
-import { Controller, useForm, type UseFormProps } from "react-hook-form"
+import {zodResolver} from "@hookform/resolvers/zod"
+import {Controller, useForm, type UseFormProps} from "react-hook-form"
 import * as z from "zod"
-import { Button } from "@/components/ui/button"
-import { Field, FieldError, FieldGroup, FieldLabel } from "@/components/ui/field"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { toast } from "sonner"
+import {Button} from "@/components/ui/button"
+import {Field, FieldError, FieldGroup, FieldLabel} from "@/components/ui/field"
+import {Input} from "@/components/ui/input"
+import {Textarea} from "@/components/ui/textarea"
+import {toast} from "sonner"
 import {useEffect, useState} from "react"
 import {CardTitle} from "@/components/ui/card";
 
@@ -17,8 +17,8 @@ export const emailFormSchema = z.object({
   }),
   email: z
       .string()
-      .min(1, { message: "Email is required." })
-      .email({ message: "Please enter a valid email address." })
+      .min(1, {message: "Email is required."})
+      .email({message: "Please enter a valid email address."})
       .toLowerCase(),
   message: z.string().min(10, {
     message: "Message must be at least 10 characters.",
@@ -66,7 +66,7 @@ export function EmailContactForm() {
     setIsLoading(true);
     const response = await fetch("/api/send", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {"Content-Type": "application/json"},
       body: JSON.stringify(values),
     })
 
@@ -77,7 +77,7 @@ export function EmailContactForm() {
       })
 
       localStorage.removeItem(STORAGE_KEY)
-      form.reset();
+      form.reset({name: '', email: '', message: ''})
     } else {
       toast.error("Failed to send message.");
     }
@@ -86,7 +86,6 @@ export function EmailContactForm() {
     }
 
     setIsLoading(false);
-    form.reset()
   }
 
   return (
@@ -96,10 +95,11 @@ export function EmailContactForm() {
           <Controller
               name="name"
               control={form.control}
-              render={({ field, fieldState }) => (
+              render={({field, fieldState}) => (
                   <Field>
                     <FieldLabel htmlFor="email-contact-form-name">Name</FieldLabel>
-                    <Input {...field} id="email-contact-form-name" aria-invalid={fieldState.invalid} placeholder="John Doe" />
+                    <Input {...field} id="email-contact-form-name" aria-invalid={fieldState.invalid}
+                           placeholder="John Doe"/>
                     {fieldState.invalid && fieldState.error && <FieldError>{fieldState.error.message}</FieldError>}
                   </Field>
               )}
@@ -108,7 +108,7 @@ export function EmailContactForm() {
           <Controller
               name="email"
               control={form.control}
-              render={({ field, fieldState }) => (
+              render={({field, fieldState}) => (
                   <Field>
                     <FieldLabel htmlFor="email-contact-form-email">Email</FieldLabel>
                     <Input
@@ -126,7 +126,7 @@ export function EmailContactForm() {
           <Controller
               name="message"
               control={form.control}
-              render={({ field, fieldState }) => (
+              render={({field, fieldState}) => (
                   <Field>
                     <FieldLabel htmlFor="email-contact-form-message">Message</FieldLabel>
                     <Textarea
