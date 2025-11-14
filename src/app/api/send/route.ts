@@ -1,53 +1,53 @@
-import {FootyLabsContactMessage} from "@/components/contact/emails/email-template"
-import {Resend} from "resend"
-import {emailFormSchema} from "@/components/contact/email-contact-form"
-import {render} from "@react-email/render"
+import { NextRequest, NextResponse } from 'next/server'
+import { render } from '@react-email/render'
+import FootyLabsContactMessage from "@/components/contact/emails/email-template";
 import {FootyLabsConfirmationMessage} from "@/components/contact/emails/confirmation";
+import {emailConfig, transporter} from "@/lib/email/mailer";
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
+    const { name, email, message } = body
 
-    // Validate with Zod
-    const {name, email, message} = body;
+    if (!name || !email || !message) {
+      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
+    }
 
-    // Render the React email to HTML
-    const emailHtml = await render(
-        FootyLabsContactMessage({
-          name,
-          email,
-          message,
-        })
-    )
-    console.log('Type of HTML content:', typeof emailHtml); // Should log: 'string'
-    // Send email
-    const result = await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL!,
-      to: process.env.RESEND_TO_EMAIL!,
-      subject: "New Contact Form Submission",
-      html: emailHtml,
-    })
-
-    if (result.error?.message) throw new Error(result.error.message)
-
-    // 2️⃣ Render the user confirmation email
-    const confirmationHtml = await render(
-        FootyLabsConfirmationMessage({name})
+    const adminEmailHtml = await render(
+        FootyLabsContactMessage({ name, email, message })
     )
 
-    await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL!,
-      to: email, // <-- user's email
-      subject: "We received your message",
-      html: confirmationHtml,
+    // Send email to admin
+    await transporter.sendMail({
+      from: `"${emailConfig.from.name}" <${emailConfig.from.address}>`,
+      to: process.env.SMTP_TO_EMAIL || 'admin@footylabs.ai', // Admin email
+      subject: 'New Contact Form Submission',
+      html: adminEmailHtml,
+      replyTo: email, // So admin can reply to the user
     })
 
-    // Return success JSON
-    return Response.json({success: true, result})
+    console.log(`Contact form email sent to admin: ${process.env.SMTP_TO_EMAIL}`)
+
+    const userEmailHtml = await render(
+        FootyLabsConfirmationMessage({ name })
+    )
+
+    // Send email to user
+    await transporter.sendMail({
+      from: `"${emailConfig.from.name}" <${emailConfig.from.address}>`,
+      to: email,
+      subject: 'We received your message',
+      html: userEmailHtml,
+    })
+
+    console.log(`Confirmation email sent to user: ${email}`)
+
+    return NextResponse.json({ success: true })
   } catch (error) {
-    console.error("Email API Error:", error)
-    return Response.json({success: false, error: String(error)}, {status: 500})
+    console.error('Error sending contact emails:', error)
+    return NextResponse.json(
+        { success: false, error: error.message },
+        { status: 500 }
+    )
   }
 }
