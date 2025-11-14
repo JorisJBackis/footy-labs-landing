@@ -49,7 +49,8 @@ export function CalCom({ formData, isFormValid }: CalComProps) {
   return (
       <Button
           type="submit"
-          data-cal-link={`sviatoslav-st9cwi/30min?email=${calConfig.prefill.email}&name=${calConfig.prefill.name}&notes=${calConfig.prefill.notes}`}
+          data-cal-link={`danius-jean-backis/30min?email=${calConfig.prefill.email}&name=${calConfig.prefill.name}&notes=${calConfig.prefill.notes}`}
+          // data-cal-link={`sviatoslav-st9cwi/30min?email=${calConfig.prefill.email}&name=${calConfig.prefill.name}&notes=${calConfig.prefill.notes}`}
           data-cal-config={JSON.stringify(calConfig)}
           disabled={!isFormValid || !calLoaded}
           className="flex-1 h-12"

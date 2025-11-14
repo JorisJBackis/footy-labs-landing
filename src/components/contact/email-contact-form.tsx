@@ -8,9 +8,10 @@ import { Field, FieldError, FieldGroup, FieldLabel } from "@/components/ui/field
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { toast } from "sonner"
-import { useEffect } from "react"
+import {useEffect, useState} from "react"
+import {CardTitle} from "@/components/ui/card";
 
-const formSchema = z.object({
+export const emailFormSchema = z.object({
   name: z.string().min(2, {
     message: "Name must be at least 2 characters.",
   }),
@@ -24,11 +25,12 @@ const formSchema = z.object({
   }),
 })
 
-type FormData = z.infer<typeof formSchema>
+type FormData = z.infer<typeof emailFormSchema>
 
 const STORAGE_KEY = "email-contact-form-draft"
 
 export function EmailContactForm() {
+  const [isLoading, setIsLoading] = useState(false);
   const getSavedFormData = (): Partial<FormData> => {
     if (typeof window === "undefined") return {}
     try {
@@ -40,7 +42,7 @@ export function EmailContactForm() {
   }
 
   const formOptions: UseFormProps<FormData> = {
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(emailFormSchema),
     defaultValues: {
       name: "",
       email: "",
@@ -60,20 +62,36 @@ export function EmailContactForm() {
     return () => subscription.unsubscribe()
   }, [form])
 
-  function onSubmit(values: FormData) {
-    console.log(values)
-    toast("Message sent!", {
-      description: "We'll get back to you as soon as possible.",
-      position: "bottom-right",
+  async function onSubmit(values: FormData) {
+    setIsLoading(true);
+    const response = await fetch("/api/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(values),
     })
-    if (typeof window !== "undefined") {
+
+    if (response.ok) {
+      toast("Message sent!", {
+        description: "We'll get back to you as soon as possible.",
+        position: "bottom-right",
+      })
+
       localStorage.removeItem(STORAGE_KEY)
+      form.reset();
+    } else {
+      toast.error("Failed to send message.");
     }
+    if (typeof window !== "undefined") {
+      localStorage.removeItem(STORAGE_KEY);
+    }
+
+    setIsLoading(false);
     form.reset()
   }
 
   return (
       <form id="email-contact-form" onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        <CardTitle className="">Contact</CardTitle>
         <FieldGroup>
           <Controller
               name="name"
@@ -124,7 +142,7 @@ export function EmailContactForm() {
           />
         </FieldGroup>
 
-        <Button type="submit" className="w-full">
+        <Button type="submit" className="w-full" disabled={isLoading}>
           Send Message
         </Button>
       </form>
