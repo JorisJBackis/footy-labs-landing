@@ -146,6 +146,7 @@ export default function PlayerRadarChart({
                                          }: {
   data: RadarDataPoint[];
   height?: number;
+  className?: string
 }) {
   if (!data || data.length === 0) {
     return <div className="text-center text-muted-foreground py-8 h-[400px] flex items-center justify-center">Radar
@@ -187,7 +188,7 @@ export function PlayerRadarBento({player}) {
   return (
       <div className="flex flex-col gap-1.5 sm:gap-3 w-full justify-center items-center">
 
-        <PlayerRadarChart data={radarData} className={"w-full h-[20rem]"}/>
+        <PlayerRadarChart data={radarData} className={"z-10 w-full h-[20rem]"}/>
       </div>
   )
 }

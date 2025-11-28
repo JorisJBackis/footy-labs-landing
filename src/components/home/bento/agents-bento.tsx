@@ -8,7 +8,7 @@ export function AgentsBento() {
   return (
       <>
         <div className="flex flex-col bg-yellow-light overflow-hidden">
-          <div className="basis-1/2 flex flex-col gap-1.5 sm:gap-1.5">
+          <div className="basis-2/5 flex flex-col gap-1.5 sm:gap-1.5">
             <h6>Scout smart</h6>
             <p className="text-accent-foreground">Identify top talent across your network with real-time player insights and AI-powered recruitment opportunities.</p>
 
@@ -42,7 +42,7 @@ export function AgentsBento() {
 
               "Interceptions per 90", "20+ more..."]}
                          className="text-accent-foreground
-                         w-[190%] pt-3 absolute left-1/2 -translate-x-1/2"
+                         w-[130%] lg:w-[190%] 3xl:w-[130%]  pt-3 absolute left-1/2 -translate-x-1/2"
                          badgeClassName="bg-yellow-dark text-accent-foreground"
                          lastClassName="bg-primary! text-primary-foreground!">
               {/*<Badge variant={"outline"}>30 more...</Badge>*/}

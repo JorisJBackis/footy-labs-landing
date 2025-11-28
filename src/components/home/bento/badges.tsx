@@ -16,7 +16,7 @@ export function BentoBadges({children, badges, className, badgeClassName,lastCla
                      className={cn(index === badges.length - 1 && !lastClassName ?
                              "bg-accent! text-accent-foreground!" :
                              lastClassName && index === badges.length - 1 ? lastClassName : "",
-                         "w-fit bg-background/10 border-none text-primary-foreground transition-opacity hover:opacity-75 duration-300 ease-out px-8 py-2",
+                         "w-fit bg-background/10 border-none text-primary-foreground transition-opacity hover:opacity-75 duration-300 ease-out px-8 py-4",
                      badgeClassName)}
                      variant="outline">{badge}</Badge>
           ))

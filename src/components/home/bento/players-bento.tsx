@@ -8,42 +8,15 @@ import {Button} from "@/components/ui/button";
 import {Icons} from "@/components/icons";
 import Link from "next/link";
 import {ShareButtons} from "@/components/home/bento/share-buttons";
+import {playersBentoData} from "@/lib/bento";
 
-const playersBentoData = {
-  profileLink: "https://app.footylabs.ai/player/02088ca6-ac3c-4177-bcd4-7968cc2f78e1",
-  metrics: [
-    {
-      label: "FootyLabs Score",
-      value: "7.2",
-      subtitle: "+8.0% this week",
-      borderColor: "border-l-green-500",
-    },
-    {
-      label: "Market Value",
-      value: "€575,000",
-      subtitle: "Estimated value",
-      borderColor: "border-l-blue-500",
-    },
-    {
-      label: "Profile Views",
-      value: "113",
-      subtitle: "This month",
-      borderColor: "border-l-purple-500",
-    },
-    {
-      label: "League Ranking",
-      value: "#53",
-      subtitle: "In your position",
-      borderColor: "border-l-orange-500",
-    },
-  ]
-}
+
 
 export function PlayersBento() {
   return (
       <>
         <div className="flex flex-col bg-gray-light overflow-hidden">
-          <div className="basis-1/2 flex flex-col gap-1.5 sm:gap-1.5">
+          <div className="basis-2/5 flex flex-col gap-1.5 sm:gap-1.5">
             <h6>Get discovered</h6>
             <p className="text-accent-foreground">
               Track your performance with personalised stats and visuals and find new opportunities</p>
@@ -78,7 +51,7 @@ export function PlayersBento() {
 
               "Interceptions per 90", "20+ more..."]}
                          className="text-accent-foreground
-                         w-[190%] pt-3 absolute left-1/2 -translate-x-1/2"
+                         w-[130%] lg:w-[190%] 3xl:w-[130%]  pt-3 absolute left-1/2 -translate-x-1/2"
                          badgeClassName="bg-gray-dark text-accent-foreground"
                          lastClassName="bg-primary-light! text-foreground!">
               {/*<Badge variant={"outline"}>30 more...</Badge>*/}

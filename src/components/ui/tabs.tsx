@@ -55,7 +55,7 @@ function TabsList({
   )
 }
 
-const tabTextVariants = {
+export const tabTextVariants = {
   active: {color: "var(--primary-foreground)"},
   inactive: {color: "var(--muted-foreground)"}
 }
