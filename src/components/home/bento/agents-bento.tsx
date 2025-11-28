@@ -7,6 +7,7 @@ import {players} from "@/components/home/bento/players-data";
 import {RotationCards} from "@/components/home/bento/rotation-cards";
 import {agentsBentoData, clubsBentoData} from "@/lib/bento";
 import {cn} from "@/lib/utils";
+import {Icons} from "@/components/icons";
 
 export function AgentsBento() {
   return (
@@ -14,7 +15,10 @@ export function AgentsBento() {
         <div className="flex flex-col bg-yellow-light overflow-hidden">
           <div className="basis-2/5 flex flex-col gap-(--space-sm) sm:gap-(--space-sm)">
             <h6>Scout smart</h6>
-            <p className="text-accent-foreground">Identify top talent across your network with real-time player insights
+            <p className="text-accent-foreground"><span className="relative">
+              <Icons.highlight className="w-full absolute -bottom-2 left-0 text-background" strokeWidth={8}/>
+              {`Identify top talent`}
+              </span> across your network with real-time player insights
               and AI-powered recruitment opportunities.</p>
 
 
@@ -59,7 +63,10 @@ export function AgentsBento() {
         <div className="flex flex-col gap-(--space-md) relative overflow-hidden">
                       <span className="hidden sm:block absolute -left-25 -top-25 3xl:-top-40 3xl:-left-40
             bg-yellow-light size-48 3xl:size-96 blur-[200px] z-0"></span>
-          <h6 className="z-10">Find matching club needs for your players</h6>
+          <h6 className="z-10">Manage <span className="relative">
+              <Icons.highlight className="w-full absolute -bottom-2 left-0 text-background" strokeWidth={24}/>
+            {` clubs `}
+              </span> you work with</h6>
           <div className="z-10 flex 3xl:flex-row 3xl:flex-wrap flex-col gap-(--space-sm) justify-between h-full">
             <TeamInfoCard></TeamInfoCard>
             <TeamInfoCard></TeamInfoCard>

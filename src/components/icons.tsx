@@ -153,5 +153,23 @@ export const Icons = {
             fill="currentColor"
         />
       </svg>
-  )
+  ),
+  highlight: (props: IconProps,) => (
+      <svg
+          width={461}
+          height={16}
+          viewBox="0 0 461 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          strokeWidth={8}
+          {...props}
+      >
+        <path
+            d="M2 13.8733C46.0229 6.3533 92.6488 10.5951 124.635 9.91552C152.842 9.3163 196.295 6.57755 224.795 6.3533C263.847 6.04604 298.222 12.5216 325.883 13.8739C344.979 14.8074 389.064 10.37 407.64 6.80822C426.216 3.24643 433.844 6.80821 459 2"
+            stroke="currentColor"
+            // strokeWidth={4}
+            strokeLinecap="round"
+        />
+      </svg>
+  ),
 }

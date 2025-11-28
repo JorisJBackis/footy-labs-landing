@@ -18,7 +18,11 @@ export function PlayersBento() {
           <div className="basis-2/5 flex flex-col gap-1.5 sm:gap-1.5">
             <h6>Get discovered</h6>
             <p className="text-accent-foreground">
-              Track your performance with personalised stats and visuals and find new opportunities</p>
+              <span className="relative">
+              <Icons.highlight className="w-full absolute -bottom-2 left-0 text-primary-light" strokeWidth={8}/>
+                {`Track your performance `}
+              </span>
+               with personalised stats and visuals and find new opportunities</p>
 
 
           </div>
@@ -62,7 +66,10 @@ export function PlayersBento() {
         <div className="basis-1/2 flex flex-col gap-(--space-sm) relative overflow-hidden">
   <span className="hidden sm:block absolute -left-25 -top-25 3xl:-top-40 3xl:-left-40
             bg-gray-dark size-48 3xl:size-96 blur-[200px] z-0"></span>
-          <h6 className="z-10">Analyze your performance</h6>
+          <h6 className="z-10">Analyze your           <span className="relative">
+              <Icons.highlight className="w-full absolute -bottom-2 left-0 text-primary-light" strokeWidth={16}/>
+            {`performance `}
+              </span></h6>
           {/*<p>Track your progress with AI-powered insights and data-driven metrics</p>*/}
           <div className="z-10 grid grid-cols-2 grid-rows-2 gap-(--space-sm) h-full">
             {
