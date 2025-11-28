@@ -7,30 +7,47 @@ import {Button} from "@/components/ui/button";
 export function AgentsBento() {
   return (
       <>
-        <div className="flex flex-col">
+        <div className="flex flex-col bg-yellow-light overflow-hidden">
           <div className="basis-1/2 flex flex-col gap-1.5 sm:gap-1.5">
-            <h6>Contact Clubs Directly</h6>
-            <div className="basis-1/2 flex flex-col gap-(--space-sm)">
-              <div
-                  className="bg-muted flex flex-row justify-between p-(--space-sm) border gap-(--space-sm) rounded-md text-muted-foreground">
-                <div className="flex justify-between items-center">
-                  <div className="flex gap-(--space-sm) items-center">
-                    <Avatar>
-                      <AvatarImage alt="fk-transinvest" src="/leagues/fk-transinvest.webp">
-                      </AvatarImage>
-                      <AvatarFallback>FK</AvatarFallback>
-                    </Avatar>
-                    <div className="flex flex-col">
-                      <span className="font-semibold text-sm  text-black dark:text-white">FK Transinvest</span>
-                      <span className="text-sm">Attacking Midfielder</span>
-                    </div>
-                  </div>
-                </div>
-                <Button>Contact</Button>
-              </div>
-            </div>
-          </div>
+            <h6>Scout smart</h6>
+            <p className="text-accent-foreground">Identify top talent across your network with real-time player insights and AI-powered recruitment opportunities.</p>
 
+
+          </div>
+          {/*<BentoBadges badges={[*/}
+          {/*  "Position",*/}
+          {/*  "Age Range",*/}
+          {/*  "Preferred Foot",*/}
+          {/*  "Market Value",*/}
+          {/*  "Playing Style",*/}
+          {/*  "Physical Attributes",*/}
+          {/*  "Availability Status",*/}
+          {/*  "Transfer Interest",*/}
+          {/*  "League Experience",*/}
+          {/*  "Player Role",*/}
+          {/*  "Salary Range",*/}
+          {/*  "20+ more...",*/}
+          {/*]} className="flex-grow border-t pt-3">*/}
+          {/*</BentoBadges>*/}
+          <div className="relative flex-grow ">
+            <BentoBadges badges={[
+              "Position",
+              "Age Range",
+              "Preferred Foot",
+              "Market Value",
+              "Playing Style",
+              "Physical Attributes",
+              "Availability Status",
+              "Transfer Interest",
+
+              "Interceptions per 90", "20+ more..."]}
+                         className="text-accent-foreground
+                         w-[190%] pt-3 absolute left-1/2 -translate-x-1/2"
+                         badgeClassName="bg-yellow-dark text-accent-foreground"
+                         lastClassName="bg-primary! text-primary-foreground!">
+              {/*<Badge variant={"outline"}>30 more...</Badge>*/}
+            </BentoBadges>
+          </div>
 
         </div>
 

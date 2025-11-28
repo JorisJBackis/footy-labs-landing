@@ -42,28 +42,48 @@ const playersBentoData = {
 export function PlayersBento() {
   return (
       <>
-        <div className="flex flex-col">
+        <div className="flex flex-col bg-gray-light overflow-hidden">
           <div className="basis-1/2 flex flex-col gap-1.5 sm:gap-1.5">
-            <h6>See club needs</h6>
-            <p className="">Discover opportunities matched to your profile and playing style</p>
+            <h6>Get discovered</h6>
+            <p className="text-accent-foreground">
+              Track your performance with personalised stats and visuals and find new opportunities</p>
 
 
           </div>
-          <BentoBadges badges={[
-            "Position",
-            "Age Range",
-            "Preferred Foot",
-            "Market Value",
-            "Playing Style",
-            "Physical Attributes",
-            "Availability Status",
-            "Transfer Interest",
-            "League Experience",
-            "Player Role",
-            "Salary Range",
-            "20+ more...",
-          ]} className="flex-grow border-t pt-3">
-          </BentoBadges>
+          {/*<BentoBadges badges={[*/}
+          {/*  "Position",*/}
+          {/*  "Age Range",*/}
+          {/*  "Preferred Foot",*/}
+          {/*  "Market Value",*/}
+          {/*  "Playing Style",*/}
+          {/*  "Physical Attributes",*/}
+          {/*  "Availability Status",*/}
+          {/*  "Transfer Interest",*/}
+          {/*  "League Experience",*/}
+          {/*  "Player Role",*/}
+          {/*  "Salary Range",*/}
+          {/*  "20+ more...",*/}
+          {/*]} className="flex-grow border-t pt-3">*/}
+          {/*</BentoBadges>*/}
+          <div className="relative flex-grow ">
+            <BentoBadges badges={[
+              "Position",
+              "Age Range",
+              "Preferred Foot",
+              "Market Value",
+              "Playing Style",
+              "Physical Attributes",
+              "Availability Status",
+              "Transfer Interest",
+
+              "Interceptions per 90", "20+ more..."]}
+                         className="text-accent-foreground
+                         w-[190%] pt-3 absolute left-1/2 -translate-x-1/2"
+                         badgeClassName="bg-gray-dark text-accent-foreground"
+                         lastClassName="bg-primary-light! text-foreground!">
+              {/*<Badge variant={"outline"}>30 more...</Badge>*/}
+            </BentoBadges>
+          </div>
 
         </div>
 

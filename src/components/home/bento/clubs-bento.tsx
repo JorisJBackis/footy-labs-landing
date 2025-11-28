@@ -9,20 +9,27 @@ export function ClubsBento({bentoUniqueId}: { bentoUniqueId: string }) {
   return (
       <>
         {/* box-1 */}
-        <div className="flex flex-col">
+        <div className="flex flex-col bg-primary-dark overflow-hidden  ">
           <div className="basis-1/2 flex flex-col gap-1.5 sm:gap-1.5">
-            <h6>Track Performance</h6>
-            <p>Analyse players performance based off 40+ different metrics available on the platform</p>
+            <h6 className="text-primary-foreground">Track Performance</h6>
+            <p className="text-primary-foreground">Analyse players performance based off 40+ different metrics available
+              on the platform</p>
           </div>
-          <BentoBadges badges={["Goals per 90",
-            "Shots on Target %",
-            "Successful Dribbles %",
-            "Key Passes per 90",
-            "Tackles Won %",
-            "Pass Accuracy %",
-            "Interceptions per 90", "35+ more..."]} className="flex-grow border-t pt-3">
-            {/*<Badge variant={"outline"}>30 more...</Badge>*/}
-          </BentoBadges>
+          <div className="relative flex-grow ">
+            <BentoBadges badges={["Goals per 90",
+              "Shots on Target %",
+              "Successful Dribbles %",
+              "Key Passes per 90",
+              "Tackles Won %",
+              "Pass Accuracy %",
+              "Interceptions per 90", "35+ more..."]}
+                         className="
+                         w-[190%] pt-3 absolute left-1/2 -translate-x-1/2"
+
+            lastClassName="bg-yellow-light! text-accent-foreground!">
+              {/*<Badge variant={"outline"}>30 more...</Badge>*/}
+            </BentoBadges>
+          </div>
         </div>
 
         {/* box-2 */}
