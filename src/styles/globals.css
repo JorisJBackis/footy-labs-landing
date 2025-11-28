@@ -6,7 +6,6 @@
 /* custom */
 :root {
     --page-max-width: 1024px;
-
 }
 
 @theme inline {
@@ -209,27 +208,27 @@
 
 @layer base {
     h1 {
-        @apply text-[clamp(2rem,1.6rem+1.5vw,3.5rem)] font-bold tracking-tight text-foreground;
+        @apply font-(family-name:--font-syne) text-[clamp(2rem,1.6rem+1.5vw,3.5rem)] font-bold tracking-tight text-foreground;
     }
 
     h2 {
-        @apply text-[clamp(1.75rem,1.5rem+1vw,2.75rem)] font-semibold tracking-tight text-foreground;
+        @apply font-(family-name:--font-syne) text-[clamp(1.75rem,1.5rem+1vw,2.75rem)] font-semibold tracking-tight text-foreground;
     }
 
     h3 {
-        @apply text-[clamp(1.5rem,1.3rem+0.8vw,2.25rem)] font-semibold text-foreground;
+        @apply font-(family-name:--font-syne) text-[clamp(1.5rem,1.3rem+0.8vw,2.25rem)] font-semibold text-foreground;
     }
 
     h4 {
-        @apply text-[clamp(1.25rem,1.1rem+0.6vw,1.75rem)] font-semibold tracking-tight text-foreground;
+        @apply font-(family-name:--font-syne) text-[clamp(1.25rem,1.1rem+0.6vw,1.75rem)] font-semibold tracking-tight text-foreground;
     }
 
     h5 {
-        @apply text-[clamp(1.125rem,1rem+0.5vw,1.5rem)] font-semibold text-foreground;
+        @apply font-(family-name:--font-syne) text-[clamp(1.125rem,1rem+0.5vw,1.5rem)] font-semibold text-foreground;
     }
 
     h6 {
-        @apply text-[clamp(1rem,0.9rem+0.4vw,1.25rem)] font-semibold text-foreground;
+        @apply font-(family-name:--font-syne) text-[clamp(1rem,0.9rem+0.4vw,1.25rem)] font-semibold text-foreground;
     }
 
     p {

@@ -22,7 +22,7 @@ export function SiteFooter() {
         <div className="container-wrapper px-4 xl:px-6">
           <div className="grid grid-cols-2 sm:grid-rows-1 sm:grid-cols-4 min-h-(--footer-height) gap-6">
             <div className="flex flex-col gap-3 sm:gap-6">
-              <Logo/>
+              <Logo className="size-10"/>
               <ModeToggleInstant/>
               <span
                   className="text-muted-foreground leading-loose sm:text-sm text-xs">{`© ${year}. Footy Labs Inc.`}</span>

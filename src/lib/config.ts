@@ -5,7 +5,8 @@ export const siteConfig = {
   description:
       'Footy Labs - platform for players, agents and clubs',
   links: {
-    signUp: "https://app.footylabs.ai/auth/register"
+    signUp: "https://app.footylabs.ai/auth/register",
+    signIn: "https://app.footylabs.ai/auth/login"
   },
   navItems: [
     {

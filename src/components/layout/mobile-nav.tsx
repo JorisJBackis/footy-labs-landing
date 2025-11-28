@@ -78,10 +78,12 @@ export function MobileNav({
                 Platform
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link href={siteConfig.links.signUp}>
+                <Link href={siteConfig.links.signIn}>
                   <Button>
                     Sign In
                   </Button>
+                </Link>
+                <Link href={siteConfig.links.signUp}>
                   <Button variant="outline">
                     Sign Up
                   </Button>
