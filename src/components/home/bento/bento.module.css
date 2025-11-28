@@ -18,7 +18,7 @@
 }
 .bento__tabslist {
   gap: clamp(0.75rem, 0.489rem + 1.304vw, 1.5rem);
-  height: 4rem;
+  height: 3.25rem;
 }
 .bento__tabslist > * {
   padding-inline: 2rem;
@@ -61,6 +61,12 @@
   border: var(--border) solid 1px;
   border-radius: 0.375rem;
   grid-area: box-4;
+  padding: clamp(0.75rem, 0.489rem + 1.304vw, 1.5rem);
+}
+.bento__content > div:nth-child(5) {
+  border: var(--border) solid 1px;
+  border-radius: 0.375rem;
+  grid-area: box-5;
   padding: clamp(0.75rem, 0.489rem + 1.304vw, 1.5rem);
 }
 

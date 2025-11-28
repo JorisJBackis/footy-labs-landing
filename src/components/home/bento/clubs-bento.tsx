@@ -153,10 +153,12 @@ export function ClubsBento({bentoUniqueId}: { bentoUniqueId: string }) {
                   </div>
                 </div>
 
-              {/*</div>*/}
-            {/*</div>*/}
-          {/*</div>*/}
         </div>
+
+      {/*  box-5 */}
+      {/*  <div className="flex border-none">*/}
+      {/*    <Button>Learn more</Button>*/}
+      {/*  </div>*/}
       </>
   )
 }

@@ -23,7 +23,7 @@
 
   &__tabslist {
     gap: $space-md;
-    height: 4rem;
+    height: 3.25rem;
 
     > * {
       padding-inline: 2rem;
@@ -46,10 +46,11 @@
      "box-1 box-1 box-1 box-1 box-3 box-3 box-3 box-3 box-3 box-3 box-3 box-3"
      "box-1 box-1 box-1 box-1 box-2 box-2 box-2 box-2 box-2 box-2 box-2 box-2"
      "box-4 box-4 box-4 box-4 box-2 box-2 box-2 box-2 box-2 box-2 box-2 box-2";
+     //"box-5 box-5 box-5 box-5 box-5 box-5 box-5 box-5 box-5 box-5 box-5 box-5";
     }
 
 
-    @for $i from 1 through 4 {
+    @for $i from 1 through 5 {
       > div:nth-child(#{$i}) {
         //@include respond(lg) {
         //  border: var(--border) solid 1px;

@@ -7,7 +7,7 @@ import bento from "@/components/home/bento/bento.module.scss";
 
 export default function HomePage() {
   return (
-      <div className={`container-wrapper ${home.home}`}>
+      <div className={`container-wrapper relative z-10 ${home.home}`}>
         <HeroSection/>
         <section className={`container overflow-hidden ${bento.bento}`}>
           <h3>Built for every side of the game.</h3>
