@@ -12,7 +12,8 @@ export function RotationCards({className, data}: { className?: string, data: any
               transformStyle: "preserve-3d",
               transform: "rotateX(15deg) rotateY(-35deg)",
             }}
-            className="grid grid-cols-2 grid-rows-2 gap-4 -translate-x-0 -translate-y-0 lg:translate-x-16 lg:translate-y-4 3xl:-translate-x-16"
+            className={cn("grid grid-cols-2 grid-rows-2 gap-4 -translate-x-0 -translate-y-0 lg:translate-x-16 lg:translate-y-4 3xl:-translate-x-16",
+                className)}
         >
           {data.metrics.map((metric, index) => (
               <div

@@ -51,7 +51,7 @@ export function PlayersBento() {
 
               "Interceptions per 90", "20+ more..."]}
                          className="text-accent-foreground
-                         w-[130%] lg:w-[190%] 3xl:w-[130%]  pt-3 absolute left-1/2 -translate-x-1/2"
+                         w-[130%] lg:w-[190%] 3xl:w-[130%]  pt-3 relative left-1/2 -translate-x-1/2"
                          badgeClassName="bg-gray-dark text-accent-foreground"
                          lastClassName="bg-primary-light! text-foreground!">
               {/*<Badge variant={"outline"}>30 more...</Badge>*/}
