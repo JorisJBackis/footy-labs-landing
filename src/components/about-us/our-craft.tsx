@@ -1,8 +1,10 @@
 import {teamMembers} from "@/lib/about-us-data";
+import Image from "next/image";
+import React from "react";
 
 export function OurCraft() {
   return (
-      <div className="flex flex-col gap-(--space-xl)">
+      <div className="flex flex-col gap-(--space-xl) items-center">
         <div className="flex flex-col sm:flex-row gap-(--space-md) justify-between">
           <h3 className="basis-1/2">We're building the platform for football professionals who care about progress</h3>
           <p className="basis-1/2 text-foreground/85">
@@ -20,6 +22,8 @@ export function OurCraft() {
             Today, players, agents, and clubs across Europe use FootyLabs to simplify their workflows and focus on what
             really matters: growing the game and unlocking potential.</p>
         </div>
+        <Image src={"/resources/danius-conf.png"} alt={"saka"} width={500} height={500}/>
+
 
       </div>
   )

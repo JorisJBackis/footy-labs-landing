@@ -9,22 +9,22 @@ export const teamMembers: TeamMember[] = [
   {
     name: "Danius",
     role: "Co-founder, CEO",
-    // imageUrl: "/team/danius.jpg", // Optional: add actual image paths
+    imageUrl: "/resources/danius.png",
   },
   {
     name: "Joris",
     role: "Junior Software Developer",
-    // imageUrl: "/team/jane.jpg",
+    imageUrl: "/resources/joris.png",
   },
   {
     name: "Nadjib",
     role: "Head of AI",
-    // imageUrl: "/team/mike.jpg",
+    imageUrl: "/resources/nadjib.png",
   },
   {
     name: "Evelina",
     role: "Marketing Specialist",
-    // imageUrl: "/team/sarah.jpg",
+    imageUrl: "/resources/evelina.png",
   },
   {
     name: "Aleksis",
