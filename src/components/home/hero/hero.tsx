@@ -26,7 +26,7 @@ export function HeroSection() {
               <StaggeredBlurText textArr={splitBySpace(heading)}>
               </StaggeredBlurText>
             </h1>
-            <p className="relative z-10">
+            <p className="relative z-10 text-lg">
               <StaggerBlurElement initDelay={pDelay}>
                 {p}
               </StaggerBlurElement>
@@ -106,11 +106,12 @@ export function StatsCoveredSection() {
           </div>
           <div>
             <UserIcon/>
-            <p className="font-semibold"><span className="text-lg">{1200}+</span> players stats</p>
+            {/*<p className="font-semibold"><span className="text-lg">{1200}+</span> players stats</p>*/}
+            <p className="font-semibold"><span className="text-lg text-primary-light">{1200}+</span> players stats</p>
           </div>
           <div>
             <Shield/>
-            <p className="font-semibold"><span className="text-lg">{400}+</span> clubs/leagues stats</p>
+            <p className="font-semibold"><span className="text-lg text-primary-light">{400}+</span> clubs/leagues stats</p>
           </div>
           <div>
           </div>

@@ -44,7 +44,7 @@ export function ClubsBento({bentoUniqueId}: { bentoUniqueId: string }) {
               "Pass Accuracy %",
               "Interceptions per 90", "35+ more..."]}
                          className="
-                         w-[130%] lg:w-[190%] 3xl:w-[130%] pt-3 relative left-1/2 -translate-x-1/2"
+                         w-[140%] lg:w-[190%] 3xl:w-[160%] pt-3 relative left-1/2 -translate-x-1/2"
 
                          lastClassName="bg-yellow-light! text-accent-foreground!">
               {/*<Badge variant={"outline"}>30 more...</Badge>*/}
@@ -55,37 +55,42 @@ export function ClubsBento({bentoUniqueId}: { bentoUniqueId: string }) {
         {/* box-2 */}
         <div
             className="relative flex flex-col justify-center items-center p-0! gap-(--space-sm) overflow-hidden max-lg:border-none!">
-          <div className="flex">
-            <span className="hidden sm:block absolute -left-25 -top-25 3xl:-top-40 3xl:-left-40
-            bg-primary size-48 3xl:size-96 blur-[200px] z-0"></span>
+          <div className="flex w-full px-(--space-md)">
+            {/*<span className="hidden sm:block absolute -left-25 -top-25 3xl:-top-40 3xl:-left-40*/}
+            {/*bg-primary size-48 3xl:size-96 blur-[200px] z-0"></span>*/}
 
-            <h3 className="hidden 3xl:block text-white opacity-75">As easy as clicking a <span className="relative">
+            <h6 className="hidden 3xl:block text-left! w-fit whitespace-nowrap">
+              As easy as clicking a
+              <span className="relative">
               <Icons.highlight className="w-full absolute -bottom-2 left-0 text-primary" strokeWidth={16}/>
               {` button`}
-              </span></h3>
-            <PlayerRadarBento player={players[playerIndex]}/>
-          </div>
-          <div className="flex flex-wrap lg:flex-nowrap gap-(--space-sm) px-(--space-md) py-(--space-md) lg:py-0">
-            {
-              players.map((playerData, index) => (
-                  <div key={index} onClick={() => setPlayerIndex(index)}
-                       className=" relative min-h-9 px-4 py-2 flex-grow lg:basis-[48%] flex justify-center items-center border rounded-md">
-                    {/*<span className="text-center">{playerData.player_pos}</span>*/}
-                    <motion.div initial={false} transition={{ease: "easeOut"}}
-                                variants={tabTextVariants} animate={index === playerIndex ? "active" : "inactive"}
-                                className="font-(family-name:--font-syne)! font-semibold z-[49] text-center p-0!">{playerData.player_pos}</motion.div>
-                    {index === playerIndex ?
-                        <motion.span
-                            transition={{ease: "easeOut", duration: 0.3}}
-                            layoutId={"player-button-1"} id={"player-button-1"}
-                            className="bg-primary absolute w-full h-full inset-0 border border-primary rounded-md"></motion.span>
-                        : null}
-                  </div>
+              </span>
+            </h6>
+            <div className="flex flex-col justify-between gap-(--space-md)">
+              <PlayerRadarBento player={players[playerIndex]}/>
+              <div className="flex flex-wrap lg:flex-nowrap gap-(--space-sm) px-(--space-md) py-(--space-md) lg:py-0">
+                {
+                  players.map((playerData, index) => (
+                      <div key={index} onClick={() => setPlayerIndex(index)}
+                           className="cursor-pointer! relative min-h-9 px-4 py-2 flex-grow lg:basis-[48%] flex justify-center items-center border rounded-md">
+                        {/*<span className="text-center">{playerData.player_pos}</span>*/}
+                        <motion.div initial={false} transition={{ease: "easeOut"}}
+                                    variants={tabTextVariants} animate={index === playerIndex ? "active" : "inactive"}
+                                    className="font-(family-name:--font-syne)! font-semibold z-[49] text-center p-0!">{playerData.player_pos}</motion.div>
+                        {index === playerIndex ?
+                            <motion.span
+                                transition={{ease: "easeOut", duration: 0.3}}
+                                layoutId={"player-button-1"} id={"player-button-1"}
+                                className="bg-primary absolute w-full h-full inset-0 border border-primary rounded-md"></motion.span>
+                            : null}
+                      </div>
 
-              ))
-            }
-          </div>
+                  ))
+                }
+              </div>
+            </div>
 
+          </div>
         </div>
 
         {/* box-3 */}
@@ -106,7 +111,7 @@ export function ClubsBento({bentoUniqueId}: { bentoUniqueId: string }) {
             </div>
           </div>
           {/*<div style={{ perspective: "1200px" }}>*/}
-          <RotationCards data={clubsBentoData}/>
+          <RotationCards className="-translate-y-0 lg:-translate-y-10" data={clubsBentoData}/>
           {/*</div>*/}
         </div>
 
@@ -119,7 +124,7 @@ export function ClubsBento({bentoUniqueId}: { bentoUniqueId: string }) {
           {/*/!*<h3 className="z-10">Control the field</h3>*!/*/}
 
           <div className="flex-1 flex flex-col">
-            <h4 className="text-xs font-semibold text-foreground mb-2">Last Game Insights</h4>
+            <h6 className="text-foreground mb-2">Last Game Insights</h6>
 
             {/* Chart container with Y-axis */}
             <div className="flex gap-2 flex-1">
@@ -137,7 +142,7 @@ export function ClubsBento({bentoUniqueId}: { bentoUniqueId: string }) {
                   className="flex items-end justify-between gap-2 flex-1 border-b border-l border-border pl-2 pb-1">
                 {stats.map((stat, index) => (
                     <div key={index} className="flex flex-col items-center gap-1.5 flex-1">
-                      <div className="flex items-end gap-1 h-24 w-full justify-center">
+                      <div className="flex items-end gap-1 h-20 w-full justify-center">
                         {/* Your team bar */}
                         <div className="w-3 bg-primary rounded-t-sm" style={{height: `${stat.yourTeam}%`}}/>
                         {/* Opponent bar */}

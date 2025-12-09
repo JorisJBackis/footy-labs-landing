@@ -23,10 +23,10 @@ export function SiteHeader() {
                 asChild
                 variant="ghost"
                 size="icon"
-                className="hidden size-10 lg:flex"
+                className="hidden h-10 lg:flex"
             >
-              <Link href="/" className="flex">
-                <Icons.logo className="size-8 text-primary"/>
+              <Link href="/" className="flex h-8 px-2 w-fit">
+                <Icons.fullLogo className="w-32! h-8! text-primary"/>
                 <span className="sr-only">{siteConfig.name}</span>
               </Link>
             </Button>

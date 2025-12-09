@@ -41,7 +41,7 @@ export function AgentsBento() {
           <div className="relative flex-grow ">
             <BentoBadges badges={[
               "Position",
-              "Age Range",
+              // "Age Range",
               "Preferred Foot",
               "Market Value",
               "Playing Style",
@@ -51,7 +51,7 @@ export function AgentsBento() {
 
               "Interceptions per 90", "20+ more..."]}
                          className="text-accent-foreground
-                         w-[130%] lg:w-[190%] 3xl:w-[130%]  pt-3 relative left-1/2 -translate-x-1/2"
+                         w-[140%] lg:w-[190%] 3xl:w-[160%]  pt-3 relative left-1/2 -translate-x-1/2"
                          badgeClassName="bg-yellow-dark text-accent-foreground"
                          lastClassName="bg-primary! text-primary-foreground!">
               {/*<Badge variant={"outline"}>30 more...</Badge>*/}
@@ -61,8 +61,8 @@ export function AgentsBento() {
         </div>
 
         <div className="flex flex-col gap-(--space-md) relative overflow-hidden">
-                      <span className="hidden sm:block absolute -left-25 -top-25 3xl:-top-40 3xl:-left-40
-            bg-yellow-light size-48 3xl:size-96 blur-[200px] z-0"></span>
+            {/*          <span className="hidden sm:block absolute -left-25 -top-25 3xl:-top-40 3xl:-left-40*/}
+            {/*bg-yellow-light size-48 3xl:size-96 blur-[200px] z-0"></span>*/}
           <h6 className="z-10">Manage <span className="relative">
               <Icons.highlight className="w-full absolute -bottom-2 left-0 text-background" strokeWidth={24}/>
             {` clubs `}

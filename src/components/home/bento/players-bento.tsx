@@ -44,7 +44,7 @@ export function PlayersBento() {
           <div className="relative flex-grow ">
             <BentoBadges badges={[
               "Position",
-              "Age Range",
+              // "Age Range",
               "Preferred Foot",
               "Market Value",
               "Playing Style",
@@ -54,7 +54,7 @@ export function PlayersBento() {
 
               "Interceptions per 90", "20+ more..."]}
                          className="text-accent-foreground
-                         w-[130%] lg:w-[190%] 3xl:w-[130%]  pt-3 relative left-1/2 -translate-x-1/2"
+                         w-[140%] lg:w-[190%] 3xl:w-[160%]  pt-3 relative left-1/2 -translate-x-1/2"
                          badgeClassName="bg-gray-dark text-accent-foreground"
                          lastClassName="bg-primary-light! text-foreground!">
               {/*<Badge variant={"outline"}>30 more...</Badge>*/}
@@ -64,9 +64,9 @@ export function PlayersBento() {
         </div>
 
         <div className="basis-1/2 flex flex-col gap-(--space-sm) relative overflow-hidden">
-  <span className="hidden sm:block absolute -left-25 -top-25 3xl:-top-40 3xl:-left-40
-            bg-gray-dark size-48 3xl:size-96 blur-[200px] z-0"></span>
-          <h6 className="z-10">Analyze your           <span className="relative">
+  {/*<span className="hidden sm:block absolute -left-25 -top-25 3xl:-top-40 3xl:-left-40*/}
+  {/*          bg-gray-dark size-48 3xl:size-96 blur-[200px] z-0"></span>*/}
+          <h6 className="z-10">Analyse your           <span className="relative">
               <Icons.highlight className="w-full absolute -bottom-2 left-0 text-primary-light" strokeWidth={16}/>
             {`performance `}
               </span></h6>
