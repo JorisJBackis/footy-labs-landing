@@ -186,9 +186,9 @@ export default function PlayerRadarChart({
 export function PlayerRadarBento({player}) {
   const radarData: RadarDataPoint[] = generateRadarData(player, leagueAverages);
   return (
-      <div className="flex flex-col gap-1.5 sm:gap-3 w-full justify-center items-center">
+      <div className="flex flex-col gap-1.5 sm:gap-3 max-w-full justify-center items-center">
 
-        <PlayerRadarChart data={radarData} className={"z-10 w-full h-[20rem]"}/>
+        <PlayerRadarChart data={radarData} className={"z-10 w-full h-60 sm:h-[20rem]"}/>
       </div>
   )
 }

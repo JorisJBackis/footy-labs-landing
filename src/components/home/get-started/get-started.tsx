@@ -1,6 +1,7 @@
 import styles from "@/components/home/get-started/get-started.module.scss";
 import {Button} from "@/components/ui/button";
 import {ContactDialog} from "@/components/contact/contact-dialog";
+import {cn} from "@/lib/utils";
 
 export function GetStarted() {
   return (
@@ -96,7 +97,7 @@ export function PlayerDiscovery() {
         <div className="relative h-full flex items-center justify-center p-6">
           <div className="bg-background rounded-2xl shadow-xl p-6 w-full max-w-md">
             {/* Filters */}
-            <div className="flex gap-2 mb-6 ">
+            <div className="flex flex-wrap justify-center gap-2 mb-6 ">
               <Button variant="outline" className="px-4 py-2 border  rounded-lg text-sm font-medium transition-colors flex items-center gap-2">
                 Position
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="opacity-50">
@@ -125,7 +126,7 @@ export function PlayerDiscovery() {
             {/* Player avatars */}
             <div className="flex gap-4 justify-center">
               {players.map((player, index) => (
-                  <div key={index} className="relative group cursor-pointer">
+                  <div key={index} className={cn("relative group cursor-pointer", index === players.length-1 ? "hidden sm:block" : "")}>
                     <div className="w-16 h-16 rounded-full overflow-hidden ring-2 ring-white shadow-md transition-transform group-hover:scale-105">
                       <img
                           src={player.image || "/placeholder.svg"}

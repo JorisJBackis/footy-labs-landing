@@ -21,7 +21,7 @@ export default function RootLayout({
       <html lang="en" suppressHydrationWarning>
       <body
           className={cn(
-              'text-foreground font-sans antialiased group/body overscroll-none  [--footer-height:calc(var(--spacing)*14)] [--header-height:calc(var(--spacing)*16)] xl:[--footer-height:calc(var(--spacing)*24)]',
+              'text-foreground font-sans antialiased group/body overscroll-none overflow-x-hidden max-w-[100vw]  [--footer-height:calc(var(--spacing)*14)] [--header-height:calc(var(--spacing)*16)] xl:[--footer-height:calc(var(--spacing)*24)]',
               fontVariables,
           )}
       >

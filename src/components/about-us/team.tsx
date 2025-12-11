@@ -6,7 +6,7 @@ import {UserIcon, UserRound} from "lucide-react";
 export function Team() {
   return (
       <div className="flex flex-col gap-(--space-xl)">
-        <div className="flex flex-col gap-(--space-sm) max-w-1/2">
+        <div className="flex flex-col gap-(--space-sm) w-full sm:max-w-[50%]">
           <h3 className="">We care about the quality of what we build</h3>
           <p className="">FootyLabs was created by a small, dedicated team passionate about football and technology. Our
             team is

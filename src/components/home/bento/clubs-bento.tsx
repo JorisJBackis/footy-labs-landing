@@ -55,7 +55,7 @@ export function ClubsBento({bentoUniqueId}: { bentoUniqueId: string }) {
         {/* box-2 */}
         <div
             className="relative flex flex-col justify-center items-center p-0! gap-(--space-sm) overflow-hidden max-lg:border-none!">
-          <div className="flex w-full px-(--space-md)">
+          <div className="flex justify-center 3xl:justify-start w-full px-(--space-md)">
             {/*<span className="hidden sm:block absolute -left-25 -top-25 3xl:-top-40 3xl:-left-40*/}
             {/*bg-primary size-48 3xl:size-96 blur-[200px] z-0"></span>*/}
 
@@ -66,9 +66,9 @@ export function ClubsBento({bentoUniqueId}: { bentoUniqueId: string }) {
               {` button`}
               </span>
             </h6>
-            <div className="flex flex-col justify-between gap-(--space-md)">
+            <div className="flex flex-col justify-between items-center gap-(--space-md) overflow-hidden">
               <PlayerRadarBento player={players[playerIndex]}/>
-              <div className="flex flex-wrap lg:flex-nowrap gap-(--space-sm) px-(--space-md) py-(--space-md) lg:py-0">
+              <div className="flex flex-col sm:flex-row flex-wrap lg:flex-nowrap gap-(--space-sm) px-(--space-md) py-(--space-md) lg:py-0 w-fit">
                 {
                   players.map((playerData, index) => (
                       <div key={index} onClick={() => setPlayerIndex(index)}

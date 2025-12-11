@@ -46,7 +46,7 @@ export function HeroSection() {
             <StaggerBlurElement initDelay={buttonsDelay + 0.2}>
               <ContactDialog>
                 <Button variant="outline"
-                        className="relative z-10"
+                        className="relative z-10 w-full!"
                 >
                   Explore Partnership
                 </Button>
@@ -54,16 +54,18 @@ export function HeroSection() {
             </StaggerBlurElement>
           </div>
           <StaggerBlurElement initDelay={buttonsDelay + 0.2 + 0.2}>
+            {/*<div className="w-full overflow-hidden">*/}
             <div className="relative">
                     <span className="hidden sm:block absolute -left-25 -top-25 3xl:-top-40 3xl:-left-40
             bg-primary-light size-24 sm:size-96 3xl:size-[calc(var(--spacing)*96*1.5]  blur-[50px] sm:blur-[200px] z-0"></span>
-              <span className="absolute -right-25 bottom-25 3xl:bottom-[25%] 3xl:-right-40
+              <span className="absolute -right-4 sm:-right-25 bottom-25 3xl:bottom-[25%] 3xl:-right-40
             bg-yellow-mid size-36 sm:size-80 3xl:size-[calc(var(--spacing)*96*1.5]  blur-[200px] z-0"></span>
               <span className="hidden sm:block absolute -left-25 top-1/2 -translate-y-1/2 3xl:-left-40
             bg-yellow-light size-40 3xl:size-[calc(var(--spacing)*96*1.5]  blur-[200px] z-0"></span>
               <Image width={1857} height={1016} src={"/club-needs.png"}
                      alt="platform image" className="relative z-10"/>
             </div>
+            {/*</div>*/}
           </StaggerBlurElement>
 
         </section>
