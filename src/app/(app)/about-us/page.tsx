@@ -16,11 +16,11 @@ export default function AboutUsPage() {
           <div className="flex flex-col gap-(--space-sm)  relative overflow-hidden">
             <h1 className="text-center">Footy Labs team</h1>
             {/*<div>*/}
-            <div className="w-screen  mr-[-50vw] ml-[-50vw] relative left-1/2 right-1/2 h-[20rem] sm:h-[32rem]">
-              <div className={` ${styles.about} w-fit -translate-x-1/2`}>
-                <Image src={"/saka.png"} alt={"saka"} width={500} height={500}/>
-              </div>
-            </div>
+            {/*<div className="w-screen  mr-[-50vw] ml-[-50vw] relative left-1/2 right-1/2 h-[20rem] sm:h-[32rem]">*/}
+            {/*  <div className={` ${styles.about} w-fit -translate-x-1/2`}>*/}
+            {/*    <Image src={"/saka.png"} alt={"saka"} width={500} height={500}/>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
             {/*</div>*/}
           </div>
           <OurCraft/>

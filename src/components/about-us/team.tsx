@@ -1,6 +1,7 @@
 import {teamMembers} from "@/lib/about-us-data";
 import Image from "next/image";
 import {cn} from "@/lib/utils";
+import {UserIcon, UserRound} from "lucide-react";
 
 export function Team() {
   return (
@@ -18,8 +19,9 @@ export function Team() {
             teamMembers.map((member, index) => (
                 <div key={index}
                      className="flex flex-col just sm:gap-(--space-sm) basis-[45%] lg:basis-[21%] 2xl:basis-[17%] ">
-                  <div className={cn("h-24 w-24 rounded-lg overflow-hidden", index % 2 ? "bg-primary-light" : "bg-yellow-light")}>
-                    {member?.imageUrl && <Image src={member.imageUrl!} alt={member.name} width={96} height={96}/>}
+                  <div className={cn("flex justify-center items-center h-24 w-24 rounded-lg overflow-hidden", index % 2 ? "bg-primary-light" : "bg-yellow-light")}>
+                    {member?.imageUrl ? <Image src={member.imageUrl!} alt={member.name} width={96} height={96}/>
+                        : <UserRound className={cn("size-16", index % 2 ? "text-muted" : "text-muted-foreground")}/>}
                   </div>
                   <div className="flex flex-col gap-1">
                     <span>{member.name}</span>

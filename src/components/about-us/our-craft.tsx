@@ -22,7 +22,49 @@ export function OurCraft() {
             focus on what matters: developing talent and unlocking potential.
           </p>
         </div>
-        <Image src={"/resources/danius-conf.png"} alt={"saka"} width={500} height={500}/>
+        <div className="flex w-full gap-4 h-[600px]">
+          {/* LEFT COLUMN */}
+          <div className="flex flex-col gap-4 flex-1">
+            <div className="flex-[1] relative">
+              <Image
+                  src="/resources/about-us_bento3.jpg"
+                  alt="photo"
+                  fill
+                  className="object-cover rounded-xl"
+              />
+            </div>
+
+            <div className="flex-[2] relative">
+              <Image
+                  src="/resources/about-us_bento1.jpg"
+                  alt="photo"
+                  fill
+                  className="object-cover rounded-xl"
+              />
+            </div>
+          </div>
+
+          {/* RIGHT COLUMN */}
+          <div className="flex flex-col gap-4 flex-1">
+            <div className="flex-[3] relative">
+              <Image
+                  src="/resources/about-us_bento2.jpg"
+                  alt="photo"
+                  fill
+                  className="object-cover rounded-xl"
+              />
+            </div>
+
+            <div className="flex-[2] relative">
+              <Image
+                  src="/resources/about-us_bento4.jpg"
+                  alt="photo"
+                  fill
+                  className="object-cover rounded-xl"
+              />
+            </div>
+          </div>
+        </div>
 
 
       </div>
