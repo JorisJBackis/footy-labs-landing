@@ -8,19 +8,19 @@ export function OurCraft() {
         <div className="flex flex-col sm:flex-row gap-(--space-md) justify-between">
           <h3 className="basis-1/2">We're building the platform for football professionals who care about progress</h3>
           <p className="basis-1/2 text-foreground/85">
-            Football used to feel pure — driven by talent, trust, and opportunity. But over time,
-            that clarity has been clouded by scattered data, broken communication, and outdated systems that slow
-            everyone down. Frustrated by how disconnected the ecosystem became, we set out to build something better — a
-            platform that helps players, agents, and clubs work together seamlessly.
+            Football thrives on talent and opportunity. But scattered data, broken communication, and outdated systems
+            were holding the game back.
             <br className="mb-2 sm:mb-4"/>
-            What started as a simple player management tool has grown into a connected system that streamlines scouting,
-            career tracking, and communication across football. We don’t see FootyLabs as just another management
-            platform, but as a new way to move the game forward — with transparency, insight, and connection at its
-            core.
-            <br className="mb-2 sm:mb-4"/>
+            Our team brings together football insiders and data scientists who share a conviction: the game deserves
+            better tools. Combining our passion for football with expertise in data and technology, we built FootyLabs
+            to connect players, agents, and clubs seamlessly. From scouting and career tracking to streamlined
+            communication, we've created the infrastructure to move the game forward with transparency and insight at
+            its core.
 
-            Today, players, agents, and clubs across Europe use FootyLabs to simplify their workflows and focus on what
-            really matters: growing the game and unlocking potential.</p>
+            <br className="mb-2 sm:mb-4"/>
+            Today, our team of football practitioners and technologists helps agents, clubs and players across Europe
+            focus on what matters: developing talent and unlocking potential.
+          </p>
         </div>
         <Image src={"/resources/danius-conf.png"} alt={"saka"} width={500} height={500}/>
 

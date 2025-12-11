@@ -10,6 +10,7 @@ import {ArrowRight} from "lucide-react";
 export function BlogItem({blog}: { blog: Blog }) {
   console.log(blog);
   const imageUrl = blog.mainImage ? imageUrlFor(blog.mainImage, 400, 300) : "/placeholder.png";
+  console.log(blog)
   return (
       <Link
           href={`/blog/${blog.slug.current}`}
@@ -36,7 +37,7 @@ export function BlogItem({blog}: { blog: Blog }) {
           {/*  />*/}
           {/*</div>*/}
           <p className=" font-normal text-gray-600 sm:max-w-1/3 text-center sm:text-start">
-            {blog.metadata?.slice(0, 140)}Article metadata...Article metadata...Article metadata...Article metadata...Article metadata...Article metadata...Article metadata...Article metadata...
+            {blog.metadata?.slice(0, 140)}
           </p>
         </article>
       </Link>

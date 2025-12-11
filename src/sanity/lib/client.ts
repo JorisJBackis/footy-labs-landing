@@ -6,7 +6,7 @@ export const config: ClientConfig = {
   dataset: dataset,
   apiVersion: apiVersion,
   useCdn: false,
-  perspective: "draft" as ClientPerspective,
+  perspective: "previewDrafts" as ClientPerspective,
 };
 
 export const client = createClient(config);

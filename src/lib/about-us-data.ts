@@ -38,7 +38,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     name: "Roman",
-    role: "Junior Software Developer",
+    role: "Junior Data Scientist",
     // imageUrl: "/team/emma.jpg",
   },
   {
@@ -48,7 +48,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     name: "Saule",
-    role: "Junior Software Developer",
+    role: "Sales Representative",
     // imageUrl: "/team/emma.jpg",
   },
 ];
